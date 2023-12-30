@@ -1,0 +1,21 @@
+{
+  "name": "artificium-ui",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "yzhang.markdown-all-in-one",
+        "aaron-bond.better-comments",
+        "usernamehw.errorlens",
+        "pmneo.tsimporter",
+        "christian-kohler.npm-intellisense",
+        "dbaeumer.vscode-eslint",
+        "wix.vscode-import-cost"
+      ]
+    }
+  }
+}
