@@ -1,0 +1,47 @@
+{
+  "name": "artificium-ui",
+  "version": "1.0.0",
+  "description": "Artificium UI Library is a versatile and responsive React component library built with TypeScript. This library is designed to seamlessly integrate into your React projects, providing a collection of reusable UI components inspired by the Artificium Figma design.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frex-is/artificium-ui.git"
+  },
+  "keywords": [
+    "artificium",
+    "ui",
+    "library",
+    "component",
+    "react",
+    "storybook",
+    "typescript"
+  ],
+  "author": "frex-is",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frex-is/artificium-ui/issues"
+  },
+  "homepage": "https://github.com/frex-is/artificium-ui#readme",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "@types/react": "^18.2.46",
+    "@types/styled-components": "^5.1.34",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.6",
+    "styled-components": "^6.1.6",
+    "typescript": "^5.3.3"
+  }
+}
