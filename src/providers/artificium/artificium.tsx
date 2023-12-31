@@ -2,9 +2,6 @@ import React, { createContext, FC as FunctionalComponent, ReactElement, ReactNod
 import { ArtificiumTheme, darkTheme } from "../../theme/theme";
 import { GlobalStyle } from "../../global.style";
 
- /**
- * The children to be wrapped by the ArtificiumProvider component.
- */
 interface ArtificiumProviderProps {
   children: ReactNode
 }
