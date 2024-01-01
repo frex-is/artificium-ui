@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ArtificiumContext } from "../providers/artificium/artificium";
+import { ArtificiumContextError } from "../errors/artificiumContextError";
 
 /**
  * Custom hook for accessing the Artificium context.

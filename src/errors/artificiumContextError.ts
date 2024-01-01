@@ -6,7 +6,7 @@
  *
  * @extends Error
  */
-class ArtificiumContextError extends Error {
+export class ArtificiumContextError extends Error {
   constructor() {
     super("useArtificium must be used within an ArtificiumProvider");
   }

@@ -6,12 +6,12 @@ interface ArtificiumProviderProps {
   children: ReactNode;
 }
 
-export interface ArtificiumContext {
+export interface IArtificiumContext {
   theme: ArtificiumTheme;
   setTheme: (theme: ArtificiumTheme) => void;
 }
 
-export const ArtificiumContext = createContext<ArtificiumContext>({
+export const ArtificiumContext = createContext<IArtificiumContext>({
   theme: darkTheme,
   setTheme: () => {},
 });
@@ -45,13 +45,8 @@ export const ArtificiumContext = createContext<ArtificiumContext>({
 export const ArtificiumProvider: FunctionalComponent<ArtificiumProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState(darkTheme);
 
-  const context = {
-    theme,
-    setTheme,
-  };
-
   return (
-    <ArtificiumContext.Provider value={context}>
+    <ArtificiumContext.Provider value={{ theme, setTheme }}>
       <GlobalStyle />
       {children}
     </ArtificiumContext.Provider>

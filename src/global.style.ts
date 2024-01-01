@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-// @ts-ignore
 import JakartaFont from "../assets/font/PlusJakartaSans-SemiBold.ttf";
 
 export const GlobalStyle = createGlobalStyle`
