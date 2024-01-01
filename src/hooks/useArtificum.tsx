@@ -5,7 +5,7 @@ import { ArtificiumContext } from "../providers/artificium/artificium";
  * Custom hook for accessing the Artificium context.
  *
  * @throws {ArtificiumContextError} Throws an error if the Artificium context is not available.
- * 
+ *
  * @returns {ArtificiumContext} The Artificium context.
  * @example
  * ```jsx
@@ -18,9 +18,9 @@ import { ArtificiumContext } from "../providers/artificium/artificium";
 export const useArtificium = () => {
   const context = useContext(ArtificiumContext);
 
-  if(!context) {
+  if (!context) {
     throw new ArtificiumContextError();
   }
 
-  return context
-}
+  return context;
+};

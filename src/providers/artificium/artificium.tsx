@@ -1,9 +1,9 @@
-import React, { createContext, FC as FunctionalComponent, ReactElement, ReactNode, useContext, useState } from "react"
+import React, { createContext, FC as FunctionalComponent, ReactNode, useState } from "react";
 import { ArtificiumTheme, darkTheme } from "../../theme/theme";
 import { GlobalStyle } from "../../global.style";
 
 interface ArtificiumProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export interface ArtificiumContext {
@@ -13,21 +13,21 @@ export interface ArtificiumContext {
 
 export const ArtificiumContext = createContext<ArtificiumContext>({
   theme: darkTheme,
-  setTheme: () => {}
+  setTheme: () => {},
 });
 
 /**
  * @component
- * The `ArtificiumProvider` component is a provider that wraps your application with 
- * a context for managing the theme of your Artificium component library. 
- * It also integrates global styles, including specific fonts, to ensure a 
+ * The `ArtificiumProvider` component is a provider that wraps your application with
+ * a context for managing the theme of your Artificium component library.
+ * It also integrates global styles, including specific fonts, to ensure a
  * consistent visual experience.
- * 
+ *
  * @props
  * - `children`: The children to be wrapped by the ArtificiumProvider component.
- * 
+ *
  * @returns {ReactElement} The rendered `ArtificiumProvider` component.
- * 
+ *
  * @example
  * ```jsx
  * import React from 'react';
@@ -47,13 +47,13 @@ export const ArtificiumProvider: FunctionalComponent<ArtificiumProviderProps> = 
 
   const context = {
     theme,
-    setTheme
+    setTheme,
   };
 
   return (
     <ArtificiumContext.Provider value={context}>
       <GlobalStyle />
-      { children }
+      {children}
     </ArtificiumContext.Provider>
-  )
-}
+  );
+};

@@ -1,14 +1,14 @@
 export interface ArtificiumTheme {
   color: {
-    primary: string
-  },
+    primary: string;
+  };
   font?: {
-    primary: string
-  }
+    primary: string;
+  };
 }
 
 export const darkTheme = {
   color: {
-    primary: "red"
-  }
-}
+    primary: "red",
+  },
+};

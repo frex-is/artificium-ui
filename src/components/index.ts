@@ -1,5 +1,3 @@
 import { Tag } from "./tag/tag";
 
-export {
-  Tag
-}
+export { Tag };
