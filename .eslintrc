@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "rules": {
+    /*
+     * The 'no-unused-vars' rule is turned off here because it generates
+     * unnecessary warnings for interface declarations in our TypeScript files.
+     *
+     * When defining interfaces, it's common to have members that may not
+     * be directly used in the file declaring the interface but could be
+     * utilized in other parts of the codebase.
+     *
+     * Disabling this rule for interface declarations helps avoid false
+     * positives and improves the readability of our code.
+     */
+    "no-unused-vars": "off"
+  }
+}

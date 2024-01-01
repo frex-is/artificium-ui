@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "prettier --write 'src/**/*.tsx' 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,10 @@
     "@storybook/test": "^7.6.6",
     "@types/react": "^18.2.46",
     "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.6",
