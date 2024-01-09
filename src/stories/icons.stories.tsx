@@ -17,6 +17,14 @@ import {
   NoteIcon,
   EditIcon,
   EditSquareIcon,
+  ArtificiumIcon,
+  AttachmentIcon,
+  CopyIcon,
+  DotsIcon,
+  MagicWandIcon,
+  MicrophoneIcon,
+  PaperPlaneIcon,
+  ShareIcon,
 } from "../components/icons";
 
 export default {
@@ -41,5 +49,13 @@ export const Icons = () => (
     <NoteIcon />
     <EditIcon />
     <EditSquareIcon />
+    <ArtificiumIcon />
+    <AttachmentIcon />
+    <CopyIcon />
+    <DotsIcon />
+    <MagicWandIcon />
+    <MicrophoneIcon />
+    <PaperPlaneIcon />
+    <ShareIcon />
   </div>
 );

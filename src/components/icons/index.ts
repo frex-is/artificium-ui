@@ -14,6 +14,14 @@ import { DocumentIcon } from "./document";
 import { NoteIcon } from "./note";
 import { EditIcon } from "./edit";
 import { EditSquareIcon } from "./edit-square";
+import { ArtificiumIcon } from "./artificium";
+import { AttachmentIcon } from "./attachment";
+import { CopyIcon } from "./copy";
+import { DotsIcon } from "./dots";
+import { MagicWandIcon } from "./magic-wand";
+import { MicrophoneIcon } from "./microphone";
+import { PaperPlaneIcon } from "./paper-plane";
+import { ShareIcon } from "./share";
 
 export {
   PadLockIcon,
@@ -32,4 +40,12 @@ export {
   NoteIcon,
   EditIcon,
   EditSquareIcon,
+  ArtificiumIcon,
+  AttachmentIcon,
+  CopyIcon,
+  DotsIcon,
+  MagicWandIcon,
+  MicrophoneIcon,
+  PaperPlaneIcon,
+  ShareIcon,
 };
