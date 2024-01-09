@@ -9,6 +9,14 @@ import {
   PlusTinyIcon,
   PlusCircleIcon,
   CogIcon,
+  ZoomOutIcon,
+  ZoomInIcon,
+  SearchIcon,
+  FolderIcon,
+  DocumentIcon,
+  NoteIcon,
+  EditIcon,
+  EditSquareIcon,
 } from "../components/icons";
 
 export default {
@@ -25,5 +33,13 @@ export const Icons = () => (
     <PlusTinyIcon />
     <PlusCircleIcon />
     <CogIcon />
+    <ZoomOutIcon />
+    <ZoomInIcon />
+    <SearchIcon />
+    <FolderIcon />
+    <DocumentIcon />
+    <NoteIcon />
+    <EditIcon />
+    <EditSquareIcon />
   </div>
 );
