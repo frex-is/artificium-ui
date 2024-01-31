@@ -22,6 +22,13 @@ import { MagicWandIcon } from "./magic-wand";
 import { MicrophoneIcon } from "./microphone";
 import { PaperPlaneIcon } from "./paper-plane";
 import { ShareIcon } from "./share";
+import { BulbIcon } from "./buld";
+import { CodeIcon } from "./code";
+import { GlobeIcon } from "./globe";
+import { ImageIcon } from "./image";
+import { InternetIcon } from "./internet";
+import { PencilIcon } from "./pencil";
+import { PlayIcon } from "./play";
 
 export {
   PadLockIcon,
@@ -48,4 +55,11 @@ export {
   MicrophoneIcon,
   PaperPlaneIcon,
   ShareIcon,
+  BulbIcon,
+  CodeIcon,
+  GlobeIcon,
+  ImageIcon,
+  InternetIcon,
+  PencilIcon,
+  PlayIcon,
 };
