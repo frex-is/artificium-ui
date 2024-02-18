@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgArrowLeftTiny = props => (
+import { SVGProps } from "react";
+
+export const ArrowLeftTinyIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -16,5 +18,3 @@ const SvgArrowLeftTiny = props => (
     />
   </svg>
 );
-export default SvgArrowLeftTiny;
-

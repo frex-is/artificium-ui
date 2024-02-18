@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgChart06 = props => (
+import { SVGProps } from "react";
+
+export const Chart06Icon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgChart06 = props => (
     />
   </svg>
 );
-export default SvgChart06;
-

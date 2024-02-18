@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgAlertTriangleSolid = props => (
+import { SVGProps } from "react";
+
+export const AlertTriangleSolidIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgAlertTriangleSolid = props => (
     />
   </svg>
 );
-export default SvgAlertTriangleSolid;
-

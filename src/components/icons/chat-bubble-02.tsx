@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgChatBubble02 = props => (
+import { SVGProps } from "react";
+
+export const ChatBubble02Icon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgChatBubble02 = props => (
     />
   </svg>
 );
-export default SvgChatBubble02;
-

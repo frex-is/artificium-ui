@@ -3,6 +3,7 @@
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": ["./tsconfig.json"] },
+  "prettier/prettier": ["error", { "endOfLine": "auto" }],
   "rules": {
     /*
      * The 'no-unused-vars' rule is turned off here because it generates

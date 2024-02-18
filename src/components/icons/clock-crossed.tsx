@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgClockCrossed = props => (
+import { SVGProps } from "react";
+
+export const ClockCrossedIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -16,5 +18,3 @@ const SvgClockCrossed = props => (
     />
   </svg>
 );
-export default SvgClockCrossed;
-
