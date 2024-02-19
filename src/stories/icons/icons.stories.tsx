@@ -193,14 +193,14 @@ import {
   ZoomOutIcon,
 } from "../../components/icons";
 import { HeaderContainer, IconContainer, PageTitle, Row, StoryContainer } from "./icons.style";
-import { useIconStore } from "./logic";
+import { useChunk } from "../../hooks/useChunk";
 
 export default {
   title: "Icons",
 };
 
 export const Store = () => {
-  const { rows } = useIconStore([
+  const { listOfChunks } = useChunk([
     AlertCircleSolidIcon,
     AlertCircleIcon,
     AlertHexagonSolidIcon,
@@ -391,7 +391,7 @@ export const Store = () => {
     WatchIcon,
     ZoomInIcon,
     ZoomOutIcon,
-  ]);
+  ], 14);
 
   return (
     <StoryContainer>
@@ -400,8 +400,8 @@ export const Store = () => {
         <ArtificiumIcon />
       </HeaderContainer>
       <IconContainer>
-        {rows.map((rowIcons, i) => (
-          <Row key={i}>{rowIcons.map((icon, ii) => icon({ key: ii}))}</Row>
+        {listOfChunks.map((iconChunk, i) => (
+          <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
         ))}
       </IconContainer>
     </StoryContainer>
