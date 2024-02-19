@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgHexagon = props => (
+import { SVGProps } from "react";
+
+export const HexagonIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgHexagon = props => (
     />
   </svg>
 );
-export default SvgHexagon;
-

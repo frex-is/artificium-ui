@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgRotateRight = props => (
+import { SVGProps } from "react";
+
+export const RotateRightIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -16,5 +18,3 @@ const SvgRotateRight = props => (
     />
   </svg>
 );
-export default SvgRotateRight;
-

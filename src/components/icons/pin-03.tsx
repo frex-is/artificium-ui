@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgPin03 = props => (
+import { SVGProps } from "react";
+
+export const Pin03Icon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgPin03 = props => (
     />
   </svg>
 );
-export default SvgPin03;
-

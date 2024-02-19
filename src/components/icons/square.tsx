@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgSquare = props => (
+import { SVGProps } from "react";
+
+export const SquareIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -19,5 +21,3 @@ const SvgSquare = props => (
     />
   </svg>
 );
-export default SvgSquare;
-

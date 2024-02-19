@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgIdCard02 = props => (
+import { SVGProps } from "react";
+
+export const IdCard02Icon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -16,5 +18,3 @@ const SvgIdCard02 = props => (
     />
   </svg>
 );
-export default SvgIdCard02;
-

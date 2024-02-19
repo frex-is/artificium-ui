@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgMail02 = props => (
+import { SVGProps } from "react";
+
+export const Mail02Icon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,5 +17,3 @@ const SvgMail02 = props => (
     />
   </svg>
 );
-export default SvgMail02;
-

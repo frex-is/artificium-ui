@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgUserCircle = props => (
+import { SVGProps } from "react";
+
+export const UserCircleIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -16,5 +18,3 @@ const SvgUserCircle = props => (
     />
   </svg>
 );
-export default SvgUserCircle;
-

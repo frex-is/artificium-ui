@@ -3,6 +3,8 @@ import { AlertCircleIcon } from "./alert-circle";
 import { AlertHexagonSolidIcon } from "./alert-hexagon-solid";
 import { AlertHexagonIcon } from "./alert-hexagon";
 import { AlertOctagonSolidIcon } from "./alert-octagon-solid";
+import { AlertOctagonIcon } from "./alert-octagon";
+import { AlertSquareSolidIcon } from "./alert-square-solid";
 import { AlertSquareIcon } from "./alert-square";
 import { AlertTriangleSolidIcon } from "./alert-triangle-solid";
 import { AlertTriangleIcon } from "./alert-triangle";
@@ -24,30 +26,7 @@ import { ArrowUpTinyIcon } from "./arrow-up-tiny";
 import { ArrowUpIcon } from "./arrow-up";
 import { ArtificiumIcon } from "./artificium";
 import { AttachmentIcon } from "./attachment";
-import { PadLockIcon } from "./padlock";
-import { PadLockOpenIcon } from "./padlock-open";
-import { PlusIcon } from "./plus";
-import { PlusTinyIcon } from "./plus-tiny";
-import { PlusCircleIcon } from "./plus-circle";
-import { ZoomOutIcon } from "./zoom-out";
-import { ZoomInIcon } from "./zoom-in";
-import { SearchIcon } from "./search";
-import { FolderIcon } from "./folder";
-import { DocumentIcon } from "./document";
-import { NoteIcon } from "./note";
-import { EditIcon } from "./edit";
-import { EditSquareIcon } from "./edit-square";
-import { DotsIcon } from "./dots";
-import { MagicWandIcon } from "./magic-wand";
-import { MicrophoneIcon } from "./microphone";
-import { PaperPlaneIcon } from "./paper-plane";
-import { ShareIcon } from "./share";
 import { BulbIcon } from "./buld";
-import { GlobeIcon } from "./globe";
-import { ImageIcon } from "./image";
-import { InternetIcon } from "./internet";
-import { PencilIcon } from "./pencil";
-import { PlayIcon } from "./play";
 import { CalendarCheckIcon } from "./calendar-check";
 import { CalendarCrossIcon } from "./calendar-cross";
 import { CalendarCrossedIcon } from "./calendar-crossed";
@@ -109,7 +88,106 @@ import { CrossSquareIcon } from "./cross-square";
 import { CrossTriangleSolidIcon } from "./cross-triangle-solid";
 import { CrossTriangleIcon } from "./cross-triangle";
 import { CrossIcon } from "./cross";
-
+import { DashbaordIcon } from "./dashbaord";
+import { DistortionIcon } from "./distortion";
+import { DocumentIcon } from "./document";
+import { DotsIcon } from "./dots";
+import { DoubleChevronDownTinyIcon } from "./double-chevron-down-tiny";
+import { DoubleChevronDownIcon } from "./double-chevron-down";
+import { DoubleChevronLeftTinyIcon } from "./double-chevron-left-tiny";
+import { DoubleChevronLeftIcon } from "./double-chevron-left";
+import { DoubleChevronRightTinyIcon } from "./double-chevron-right-tiny";
+import { DoubleChevronRightIcon } from "./double-chevron-right";
+import { DoubleChevronUpTinyIcon } from "./double-chevron-up-tiny";
+import { DoubleChevronUpIcon } from "./double-chevron-up";
+import { DownloadIcon } from "./Download";
+import { EditSquareIcon } from "./edit-square";
+import { EditIcon } from "./edit";
+import { EyeCrossIcon } from "./eye-cross";
+import { EyeIcon } from "./eye";
+import { FaceConfoundedIcon } from "./face-confounded";
+import { FaceHappy02Icon } from "./face-happy-02";
+import { FaceHappyWinkIcon } from "./face-happy-wink";
+import { FaceLaughWinkIcon } from "./face-laugh-wink";
+import { FaceLaughIcon } from "./face-laugh";
+import { FaceNeutralIcon } from "./face-neutral";
+import { FaceSad02Icon } from "./face-sad-02";
+import { FaceSadIcon } from "./face-sad";
+import { FacebookIcon } from "./facebook";
+import { FigmaIcon } from "./figma";
+import { FolderIcon } from "./folder";
+import { FullCrossCircleIcon } from "./full-cross-circle";
+import { FullScreenIcon } from "./full-screen";
+import { GlobeIcon } from "./globe";
+import { HeartCrossedIcon } from "./heart-crossed";
+import { HeartIcon } from "./heart";
+import { HexagonIcon } from "./hexagon";
+import { HomeIcon } from "./home";
+import { IdCard02Icon } from "./id-card-02";
+import { IdCardIcon } from "./id-card";
+import { ImageIcon } from "./image";
+import { InfoCircleSolidIcon } from "./info-circle-solid";
+import { InfoCircleIcon } from "./info-circle";
+import { InfoHexagonSolidIcon } from "./info-hexagon-solid";
+import { InfoHexagonIcon } from "./info-hexagon";
+import { InfoOctagonSolidIcon } from "./info-octagon-solid";
+import { InfoOctagonIcon } from "./info-octagon";
+import { InfoSquareSolidIcon } from "./info-square-solid";
+import { InfoSquareIcon } from "./info-square";
+import { InfoTriangleSolidIcon } from "./info-triangle-solid";
+import { InfoTriangleIcon } from "./info-triangle";
+import { InstagramIcon } from "./instagram";
+import { InternetIcon } from "./internet";
+import { LinkIcon } from "./link";
+import { MagicWandIcon } from "./magic-wand";
+import { Mail02Icon } from "./mail-02";
+import { Mail03Icon } from "./mail-03";
+import { MailIcon } from "./mail";
+import { MicrophoneIcon } from "./microphone";
+import { NoteIcon } from "./note";
+import { OctagonIcon } from "./octagon";
+import { PadLockOpenIcon } from "./padlock-open";
+import { PadLockIcon } from "./padlock";
+import { PaperPlaneIcon } from "./paper-plane";
+import { PencilIcon } from "./pencil";
+import { PhoneIcon } from "./phone";
+import { Pin02Icon } from "./pin-02";
+import { Pin03Icon } from "./pin-03";
+import { PinIcon } from "./pin";
+import { PlayIcon } from "./play";
+import { PlusCircleIcon } from "./plus-circle";
+import { PlusTinyIcon } from "./plus-tiny";
+import { PlusIcon } from "./plus";
+import { PuzzleIcon } from "./puzzle";
+import { RotateLeftIcon } from "./rotate-left";
+import { RotateRightIcon } from "./rotate-right";
+import { RotateIcon } from "./rotate";
+import { SearchIcon } from "./search";
+import { ShareIcon } from "./share";
+import { SlashIcon } from "./slash";
+import { SlidersIcon } from "./sliders";
+import { SquareIcon } from "./square";
+import { StarIcon } from "./Star";
+import { SunIcon } from "./sun";
+import { ThunderIcon } from "./thunder";
+import { TriangleIcon } from "./triangle";
+import { UserCheckIcon } from "./user-check";
+import { UserCircleIcon } from "./user-circle";
+import { UserClockIcon } from "./user-clock";
+import { UserCogIcon } from "./user-cog";
+import { UserCrossIcon } from "./user-cross";
+import { UserCrossedIcon } from "./user-crossed";
+import { UserEditIcon } from "./user-edit";
+import { UserLoveIcon } from "./user-love";
+import { UserMinusIcon } from "./user-minus";
+import { UserPlusIcon } from "./user-plus";
+import { UserSearchIcon } from "./user-search";
+import { UserIcon } from "./user";
+import { Users02Icon } from "./users-02";
+import { UsersIcon } from "./users";
+import { WatchIcon } from "./watch";
+import { ZoomInIcon } from "./zoom-in";
+import { ZoomOutIcon } from "./zoom-out";
 
 export {
   AlertCircleSolidIcon,
@@ -117,6 +195,8 @@ export {
   AlertHexagonSolidIcon,
   AlertHexagonIcon,
   AlertOctagonSolidIcon,
+  AlertOctagonIcon,
+  AlertSquareSolidIcon,
   AlertSquareIcon,
   AlertTriangleSolidIcon,
   AlertTriangleIcon,
@@ -136,32 +216,9 @@ export {
   ArrowUpRightIcon,
   ArrowUpTinyIcon,
   ArrowUpIcon,
-  PadLockIcon,
-  PadLockOpenIcon,
-  PlusIcon,
-  PlusTinyIcon,
-  PlusCircleIcon,
-  ZoomOutIcon,
-  ZoomInIcon,
-  SearchIcon,
-  FolderIcon,
-  DocumentIcon,
-  NoteIcon,
-  EditIcon,
-  EditSquareIcon,
   ArtificiumIcon,
   AttachmentIcon,
-  DotsIcon,
-  MagicWandIcon,
-  MicrophoneIcon,
-  PaperPlaneIcon,
-  ShareIcon,
   BulbIcon,
-  GlobeIcon,
-  ImageIcon,
-  InternetIcon,
-  PencilIcon,
-  PlayIcon,
   CalendarCheckIcon,
   CalendarCrossIcon,
   CalendarCrossedIcon,
@@ -222,5 +279,105 @@ export {
   CrossSquareIcon,
   CrossTriangleSolidIcon,
   CrossTriangleIcon,
-  CrossIcon
+  CrossIcon,
+  DashbaordIcon,
+  DistortionIcon,
+  DocumentIcon,
+  DotsIcon,
+  DoubleChevronDownTinyIcon,
+  DoubleChevronDownIcon,
+  DoubleChevronLeftTinyIcon,
+  DoubleChevronLeftIcon,
+  DoubleChevronRightTinyIcon,
+  DoubleChevronRightIcon,
+  DoubleChevronUpTinyIcon,
+  DoubleChevronUpIcon,
+  DownloadIcon,
+  EditSquareIcon,
+  EditIcon,
+  EyeCrossIcon,
+  EyeIcon,
+  FaceConfoundedIcon,
+  FaceHappy02Icon,
+  FaceHappyWinkIcon,
+  FaceLaughWinkIcon,
+  FaceLaughIcon,
+  FaceNeutralIcon,
+  FaceSad02Icon,
+  FaceSadIcon,
+  FacebookIcon,
+  FigmaIcon,
+  FolderIcon,
+  FullCrossCircleIcon,
+  FullScreenIcon,
+  GlobeIcon,
+  HeartCrossedIcon,
+  HeartIcon,
+  HexagonIcon,
+  HomeIcon,
+  IdCard02Icon,
+  IdCardIcon,
+  ImageIcon,
+  InfoCircleSolidIcon,
+  InfoCircleIcon,
+  InfoHexagonSolidIcon,
+  InfoHexagonIcon,
+  InfoOctagonSolidIcon,
+  InfoOctagonIcon,
+  InfoSquareSolidIcon,
+  InfoSquareIcon,
+  InfoTriangleSolidIcon,
+  InfoTriangleIcon,
+  InstagramIcon,
+  InternetIcon,
+  LinkIcon,
+  MagicWandIcon,
+  Mail02Icon,
+  Mail03Icon,
+  MailIcon,
+  MicrophoneIcon,
+  NoteIcon,
+  OctagonIcon,
+  PadLockOpenIcon,
+  PadLockIcon,
+  PaperPlaneIcon,
+  PencilIcon,
+  PhoneIcon,
+  Pin02Icon,
+  Pin03Icon,
+  PinIcon,
+  PlayIcon,
+  PlusCircleIcon,
+  PlusTinyIcon,
+  PlusIcon,
+  PuzzleIcon,
+  RotateLeftIcon,
+  RotateRightIcon,
+  RotateIcon,
+  SearchIcon,
+  ShareIcon,
+  SlashIcon,
+  SlidersIcon,
+  SquareIcon,
+  StarIcon,
+  SunIcon,
+  ThunderIcon,
+  TriangleIcon,
+  UserCheckIcon,
+  UserCircleIcon,
+  UserClockIcon,
+  UserCogIcon,
+  UserCrossIcon,
+  UserCrossedIcon,
+  UserEditIcon,
+  UserLoveIcon,
+  UserMinusIcon,
+  UserPlusIcon,
+  UserSearchIcon,
+  UserIcon,
+  Users02Icon,
+  UsersIcon,
+  WatchIcon,
+  ZoomInIcon,
+  ZoomOutIcon,
 };

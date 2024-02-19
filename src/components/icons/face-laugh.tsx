@@ -1,5 +1,7 @@
 import * as React from "react";
-const SvgFaceLaugh = props => (
+import { SVGProps } from "react";
+
+export const FaceLaughIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -30,5 +32,3 @@ const SvgFaceLaugh = props => (
     />
   </svg>
 );
-export default SvgFaceLaugh;
-
