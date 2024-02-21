@@ -15,9 +15,11 @@ export const IconContainer = styled.div`
 
 export const HeaderContainer = styled.div`
   padding: 64px;
-  background: linear-gradient(to bottom left, #82dbf7 0%, #b6f09c 100%);
+  background: linear-gradient(to top right, ${(theme) => theme.theme.gradient.quinary});
   border-radius: 24px 24px 0 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const StoryContainer = styled.div`

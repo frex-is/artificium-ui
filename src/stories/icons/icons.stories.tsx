@@ -194,12 +194,15 @@ import {
 } from "../../components/icons";
 import { HeaderContainer, IconContainer, PageTitle, Row, StoryContainer } from "./icons.style";
 import { useChunk } from "../../hooks/useChunk";
+import { ArtificiumProvider } from "../../providers";
+import { useArtificium } from "../../hooks/useArtificum";
 
 export default {
   title: "Icons",
 };
 
-export const Store = () => {
+const IconResumeCard = () => {
+  const { theme } = useArtificium();
   const { listOfChunks } = useChunk([
     AlertCircleSolidIcon,
     AlertCircleIcon,
@@ -394,16 +397,27 @@ export const Store = () => {
   ], 14);
 
   return (
-    <StoryContainer>
-      <HeaderContainer>
-        <PageTitle>Icons</PageTitle>
-        <ArtificiumIcon />
-      </HeaderContainer>
-      <IconContainer>
-        {listOfChunks.map((iconChunk, i) => (
-          <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
-        ))}
-      </IconContainer>
-    </StoryContainer>
+      <StoryContainer>
+        <HeaderContainer theme={theme}>
+          <PageTitle>Icons</PageTitle>
+          <ArtificiumIcon 
+            stroke={theme.color.secondary[700]}
+            strokeWidth={1}
+            width={80}
+            height={80}
+          />
+        </HeaderContainer>
+        <IconContainer>
+          {listOfChunks.map((iconChunk, i) => (
+            <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
+          ))}
+        </IconContainer>
+      </StoryContainer>
   );
 };
+
+export const Storybook = () => (
+  <ArtificiumProvider>
+    <IconResumeCard />
+  </ArtificiumProvider>
+);

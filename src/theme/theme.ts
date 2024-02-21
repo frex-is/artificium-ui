@@ -56,6 +56,17 @@ export interface ArtificiumTheme {
       800: string;
       900: string;
     };
+    senary: {
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+      500: string;
+      600: string;
+      700: string;
+      800: string;
+      900: string;
+    };
     warn: {
       100: string;
       600: string;
@@ -72,6 +83,14 @@ export interface ArtificiumTheme {
       900: string;
     };
   };
+  gradient: {
+    primary: string,
+    secondary: string;
+    tertiary: string;
+    quaternary: string;
+    quinary: string;
+    senary: string;
+  }
   font?: {
     primary: string;
   };
@@ -125,15 +144,26 @@ export const darkTheme: ArtificiumTheme = {
       900: "#392D0B",
     },
     quinary: {
-      100: "#",
-      200: "#",
-      300: "#",
-      400: "#",
-      500: "#",
-      600: "#",
-      700: "#",
-      800: "#",
-      900: "#",
+      100: "#F7FDF4",
+      200: "#EDFBE6",
+      300: "#DBF7CD",
+      400: "#C8F4B4",
+      500: "#B6F09C",
+      600: "#9AD37F",
+      700: "#739F5F",
+      800: "#4D6A3F",
+      900: "#263520",
+    },
+    senary: {
+      100: "#F1FBFE",
+      200: "#E0F6FD",
+      300: "#C0EDFB",
+      400: "#A1E4F9",
+      500: "#82DBF7",
+      600: "#65BEDA",
+      700: "#4C8FA4",
+      800: "#335F6D",
+      900: "#193037",
     },
     warn: {
       100: "#FFF2E9",
@@ -151,4 +181,12 @@ export const darkTheme: ArtificiumTheme = {
       900: "#2F0F0E",
     },
   },
+  gradient: {
+    primary: "#9AD37F 0%, #65BEDA 60%, #3045C9 100%",
+    secondary: "",
+    tertiary: "",
+    quaternary: "",
+    quinary: "#B6F09C 0%, #82DBF7 100%",
+    senary: "",
+  }
 };
