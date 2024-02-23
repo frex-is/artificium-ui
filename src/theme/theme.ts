@@ -87,9 +87,6 @@ export interface ArtificiumTheme {
     primary: string,
     secondary: string;
     tertiary: string;
-    quaternary: string;
-    quinary: string;
-    senary: string;
   }
   font?: {
     primary: string;
@@ -183,10 +180,7 @@ export const darkTheme: ArtificiumTheme = {
   },
   gradient: {
     primary: "#9AD37F 0%, #65BEDA 60%, #3045C9 100%",
-    secondary: "",
-    tertiary: "",
-    quaternary: "",
-    quinary: "#B6F09C 0%, #82DBF7 100%",
-    senary: "",
+    secondary: "#B6F09C 0%, #87DDEE 40%, #4D62E5 100%",
+    tertiary: "#B6F09C 0%, #82DBF7 100%",
   }
 };

@@ -192,14 +192,17 @@ import {
   ZoomInIcon,
   ZoomOutIcon,
 } from "../../components/icons";
-import { HeaderContainer, IconContainer, PageTitle, Row, StoryContainer } from "./icons.style";
+import { IconContainer, Row } from "./icons.style";
 import { useChunk } from "../../hooks/useChunk";
 import { ArtificiumProvider } from "../../providers";
 import { useArtificium } from "../../hooks/useArtificum";
+import { StoryCard } from "../utils/story-card/story-card";
 
 export default {
   title: "Icons",
 };
+
+// TODO : add option to stroke for all icon HF moi du futur :)
 
 const IconResumeCard = () => {
   const { theme } = useArtificium();
@@ -397,22 +400,13 @@ const IconResumeCard = () => {
   ], 14);
 
   return (
-      <StoryContainer>
-        <HeaderContainer theme={theme}>
-          <PageTitle>Icons</PageTitle>
-          <ArtificiumIcon 
-            stroke={theme.color.secondary[700]}
-            strokeWidth={1}
-            width={80}
-            height={80}
-          />
-        </HeaderContainer>
-        <IconContainer>
+      <StoryCard title="icons">
+        <IconContainer theme={theme}>
           {listOfChunks.map((iconChunk, i) => (
             <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
           ))}
         </IconContainer>
-      </StoryContainer>
+      </StoryCard>
   );
 };
 
