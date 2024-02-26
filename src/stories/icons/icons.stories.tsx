@@ -204,7 +204,7 @@ export default {
 
 // TODO : add option to stroke for all icon HF moi du futur :)
 
-const IconResumeCard = () => {
+const IconsCard = () => {
   const { theme } = useArtificium();
   const { listOfChunks } = useChunk([
     AlertCircleSolidIcon,
@@ -400,7 +400,7 @@ const IconResumeCard = () => {
   ], 14);
 
   return (
-      <StoryCard title="icons">
+      <StoryCard title="Icons">
         <IconContainer theme={theme}>
           {listOfChunks.map((iconChunk, i) => (
             <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
@@ -410,8 +410,8 @@ const IconResumeCard = () => {
   );
 };
 
-export const Storybook = () => (
+export const Overview = () => (
   <ArtificiumProvider>
-    <IconResumeCard />
+    <IconsCard />
   </ArtificiumProvider>
 );

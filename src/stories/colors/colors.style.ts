@@ -4,6 +4,7 @@ export const ColorContainer = styled.div`
   padding: 64px;
   display: flex;
   gap: 64px;
+  background-color: ${({ theme }) => theme.color.primary[800]};
 `;
 
 export const ColorName = styled.div`
@@ -28,6 +29,6 @@ export const Color = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.color.primary[700]}
+  color: ${({ theme }) => theme.textColor};
   font-family: "jakarta";
 `;

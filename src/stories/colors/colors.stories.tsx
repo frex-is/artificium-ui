@@ -13,13 +13,31 @@ const ColorsCard = () => {
 
   return (
     <StoryCard title="Colors">
-      { Object.entries(theme.color).map(([name, nuances]) => (
-        <ColorContainer>
+      { Object.entries(theme.color).map(([name, shades]) => (
+        <ColorContainer 
+          key={name} 
+          theme={theme}
+        >
           <ColorName theme={theme}>{ name }</ColorName>
           <ColorGridContainer>
-          {Object.entries(nuances).map(([value, color]) => (
-            value != "0" && (<Color theme={theme} color={color}>{ value }</Color>)
-          ))}
+          {Object.entries(shades).map(([shade, color]) => {
+            const shadeNumber = Number(shade);
+            const isRendered = shadeNumber > 0;
+            const textColor = shadeNumber > 400 ? shades[100] : shades[900];
+            
+            return isRendered && (
+              <Color
+                key={color} 
+                theme={{
+                  ...theme,
+                  textColor
+                }}
+                color={color}
+              >
+                { shadeNumber }
+              </Color>
+            )
+          })}
           </ColorGridContainer>
         </ColorContainer>
       ))
@@ -28,7 +46,7 @@ const ColorsCard = () => {
   )
 }
 
-export const Storybook = () => (
+export const Overview = () => (
   <ArtificiumProvider>
     <ColorsCard />
   </ArtificiumProvider>

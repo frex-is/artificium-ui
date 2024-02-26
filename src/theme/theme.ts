@@ -89,7 +89,10 @@ export interface ArtificiumTheme {
     tertiary: string;
   }
   font?: {
-    primary: string;
+    bold: string;
+    semiBold: string;
+    medium: string;
+    regular: string;
   };
 }
 
