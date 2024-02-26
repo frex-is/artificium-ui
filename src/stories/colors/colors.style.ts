@@ -31,4 +31,5 @@ export const Color = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.textColor};
   font-family: "jakarta";
+  border: 1px solid ${({ theme, color }) => theme.color.primary[800] === color ? theme.color.primary[600] : "none"}
 `;
