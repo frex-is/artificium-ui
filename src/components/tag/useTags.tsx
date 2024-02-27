@@ -1,10 +1,10 @@
-import { useArtificium } from "../../hooks/useArtificum"
-import { Variant } from '../../types/variant';
+import { useArtificium } from "../../hooks/useArtificum";
+import { Variant } from "../../types/variant";
 
 export interface useTagsProps {
   variant?: Variant;
   customColor?: string;
-} 
+}
 
 export const useTags = ({ variant, customColor }: useTagsProps) => {
   const { theme } = useArtificium();
@@ -36,5 +36,5 @@ export const useTags = ({ variant, customColor }: useTagsProps) => {
 
   const color = customColor ?? getColor();
 
-  return { color }
-}
+  return { color };
+};

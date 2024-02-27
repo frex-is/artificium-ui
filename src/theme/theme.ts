@@ -84,15 +84,22 @@ export interface ArtificiumTheme {
     };
   };
   gradient: {
-    primary: string,
+    primary: string;
     secondary: string;
     tertiary: string;
-  }
-  font?: {
+  };
+  font: {
     bold: string;
     semiBold: string;
     medium: string;
     regular: string;
+  };
+  fontsize: {
+    xs: string;
+    s: string;
+    m: string;
+    l: string;
+    xl: string;
   };
 }
 
@@ -185,5 +192,18 @@ export const darkTheme: ArtificiumTheme = {
     primary: "#9AD37F 0%, #65BEDA 60%, #3045C9 100%",
     secondary: "#B6F09C 0%, #87DDEE 40%, #4D62E5 100%",
     tertiary: "#B6F09C 0%, #82DBF7 100%",
-  }
+  },
+  font: {
+    bold: "jakarta-bold",
+    semiBold: "jarkarta-semi-bold",
+    medium: "jakarta-medium",
+    regular: "jakarta-regular",
+  },
+  fontsize: {
+    xs: "20px",
+    s: "24px",
+    m: "28px",
+    l: "32px",
+    xl: "36px",
+  },
 };

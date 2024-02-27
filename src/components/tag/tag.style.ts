@@ -9,11 +9,7 @@ export const StyledTag = styled.p`
 
 export const TagContainer = styled.div`
   align-items: center;
-  background: linear-gradient(
-    to bottom right,
-    #D7EDED06 0%,
-    #CCEBEB22 100%
-  );
+  background: linear-gradient(to bottom right, #d7eded06 0%, #ccebeb22 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 12px;
   display: inline-flex;
@@ -34,6 +30,7 @@ export const BottomLeftGlow = styled.div`
   left: -25px;
   border-radius: 50%;
   filter: blur(16px);
+  opacity: 0.3;
 `;
 
 export const TopRightGlow = styled.div`
@@ -45,4 +42,5 @@ export const TopRightGlow = styled.div`
   top: -11px;
   border-radius: 50%;
   filter: blur(16px);
+  opacity: 0.3;
 `;

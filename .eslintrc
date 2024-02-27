@@ -3,7 +3,6 @@
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": ["./tsconfig.json"] },
-  "prettier/prettier": ["error", { "endOfLine": "auto" }],
   "rules": {
     /*
      * The 'no-unused-vars' rule is turned off here because it generates
@@ -16,6 +15,7 @@
      * Disabling this rule for interface declarations helps avoid false
      * positives and improves the readability of our code.
      */
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
   }
 }

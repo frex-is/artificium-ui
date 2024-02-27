@@ -10,19 +10,21 @@ export default {
 
 const GradientCard = () => {
   const { theme } = useArtificium();
-  const gradientDirection = ["to top right", "to bottom left"]
+  const gradientDirection = ["to top right", "to bottom left"];
 
   return (
     <StoryCard title="Gradient">
       <GradientsContainer theme={theme}>
-        { Object.entries(theme.gradient).map(([name, gradient]) => gradientDirection.map((direction) => (
-          <Gradient 
-            theme={{ direction, gradient }}
-            color={theme.color.primary[700]}
-          >
-            { name } - { direction }
-          </Gradient>
-        )))}
+        {Object.entries(theme.gradient).map(([name, gradient]) =>
+          gradientDirection.map(direction => (
+            <Gradient
+              theme={{ direction, gradient }}
+              color={theme.color.primary[700]}
+            >
+              {name} - {direction}
+            </Gradient>
+          )),
+        )}
       </GradientsContainer>
     </StoryCard>
   );

@@ -8,7 +8,7 @@ import { ArtificiumContextError } from "../errors/artificiumContextError";
  * @throws {ArtificiumContextError} Throws an error if the Artificium context is not available.
  *
  * @returns {ArtificiumContext} The Artificium context.
- * 
+ *
  * @example
  * ```jsx
  * const MyComponent = () => {

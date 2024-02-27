@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
-import { useArtificium } from '../../../hooks/useArtificum';
-import { HeaderContainer, PageTitle, StoryCardContainer } from './story-card.style';
-import { ArtificiumIcon } from '../../../components/icons';
+import React, { ReactNode } from "react";
+import { useArtificium } from "../../../hooks/useArtificum";
+import { HeaderContainer, PageTitle, StoryCardContainer } from "./story-card.style";
+import { ArtificiumIcon } from "../../../components/icons";
 
 interface StoryCardProps {
   title: string;
@@ -14,15 +14,15 @@ export const StoryCard = ({ title, children }: StoryCardProps) => {
   return (
     <StoryCardContainer>
       <HeaderContainer theme={theme}>
-        <PageTitle>{ title }</PageTitle>
-        <ArtificiumIcon 
-            stroke={theme.color.secondary[700]}
-            strokeWidth={1}
-            width={80}
-            height={80}
+        <PageTitle>{title}</PageTitle>
+        <ArtificiumIcon
+          stroke={theme.color.secondary[700]}
+          strokeWidth={1}
+          width={80}
+          height={80}
         />
       </HeaderContainer>
-      { children }
+      {children}
     </StoryCardContainer>
   );
-}
+};

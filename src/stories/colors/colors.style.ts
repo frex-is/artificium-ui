@@ -5,6 +5,7 @@ export const ColorContainer = styled.div`
   display: flex;
   gap: 64px;
   background-color: ${({ theme }) => theme.color.primary[800]};
+  border-bottom: 1px solid ${({ theme }) => theme.color.primary[600]};
 `;
 
 export const ColorName = styled.div`
@@ -31,5 +32,7 @@ export const Color = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.textColor};
   font-family: "jakarta";
-  border: 1px solid ${({ theme, color }) => theme.color.primary[800] === color ? theme.color.primary[600] : "none"}
+  border: 1px solid
+    ${({ theme, color }) =>
+      theme.color.primary[800] === color ? theme.color.primary[600] : "none"};
 `;

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const BadgesContainer = styled.div`
   background-color: ${({ theme }) => theme.color.primary[800]};
