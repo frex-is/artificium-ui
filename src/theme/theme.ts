@@ -94,13 +94,6 @@ export interface ArtificiumTheme {
     medium: string;
     regular: string;
   };
-  fontsize: {
-    xs: string;
-    s: string;
-    m: string;
-    l: string;
-    xl: string;
-  };
 }
 
 export const darkTheme: ArtificiumTheme = {
@@ -195,15 +188,8 @@ export const darkTheme: ArtificiumTheme = {
   },
   font: {
     bold: "jakarta-bold",
-    semiBold: "jarkarta-semi-bold",
+    semiBold: "jakarta-semi-bold",
     medium: "jakarta-medium",
     regular: "jakarta-regular",
-  },
-  fontsize: {
-    xs: "20px",
-    s: "24px",
-    m: "28px",
-    l: "32px",
-    xl: "36px",
   },
 };
