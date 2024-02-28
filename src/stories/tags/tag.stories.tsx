@@ -17,8 +17,11 @@ const TagCards = () => {
 
   return (
     <StoryCard title="Tags">
-      <BadgesContainer theme={theme}>
-        <BadgeList theme={theme}>
+      <BadgesContainer backgroundColor={theme.color.primary[800]}>
+        <BadgeList
+          backgroundColor={theme.color.primary[700]}
+          borderColor={theme.color.primary[500]}
+        >
           <Tag
             variant="secondary"
             name="Badge"

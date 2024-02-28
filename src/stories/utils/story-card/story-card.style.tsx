@@ -5,9 +5,11 @@ export const Row = styled.div`
   gap: 48px;
 `;
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div<{
+  backgroundGradient: string;
+}>`
   padding: 64px;
-  background: linear-gradient(to top right, ${({ theme }) => theme.gradient.tertiary});
+  background: linear-gradient(to top right, ${({ backgroundGradient }) => backgroundGradient});
   border-radius: 24px 24px 0 0;
   display: flex;
   justify-content: space-between;

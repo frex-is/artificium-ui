@@ -16,9 +16,10 @@ const ColorsCard = () => {
       {Object.entries(theme.color).map(([name, shades]) => (
         <ColorContainer
           key={name}
-          theme={theme}
+          backgroundColor={theme.color.primary[800]}
+          borderColor={theme.color.primary[600]}
         >
-          <ColorName theme={theme}>{name}</ColorName>
+          <ColorName color={theme.color.primary[0]}>{name}</ColorName>
           <ColorGridContainer>
             {Object.entries(shades).map(([shade, color]) => {
               const shadeNumber = Number(shade);
@@ -29,11 +30,11 @@ const ColorsCard = () => {
                 isRendered && (
                   <Color
                     key={color}
-                    theme={{
-                      ...theme,
-                      textColor,
-                    }}
                     color={color}
+                    textColor={textColor}
+                    borderColor={
+                      theme.color.primary[800] === color ? theme.color.primary[600] : "none"
+                    }
                   >
                     {shadeNumber}
                   </Color>

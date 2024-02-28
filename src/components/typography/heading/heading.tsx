@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-import { useArtificium } from "../../../hooks/useArtificum";
+import React, { FC as FunctionalComponent, ReactNode } from "react";
 import { HeadingContainer } from "./heading.style";
 import { Size } from "../../../types/size";
 import { FontWeight } from "../../../types/fontWeight";
@@ -12,7 +11,12 @@ export interface HeadingProps {
   color?: string;
 }
 
-export const Heading = ({ size, children, fontWeight = "regular", color }: HeadingProps) => {
+export const Heading: FunctionalComponent<HeadingProps> = ({
+  size,
+  children,
+  fontWeight = "regular",
+  color = undefined,
+}) => {
   const { fontFamily, fontSize, lineHeight, letterSpacing, textColor } = useHeading({
     size,
     fontWeight,
@@ -21,13 +25,11 @@ export const Heading = ({ size, children, fontWeight = "regular", color }: Headi
 
   return (
     <HeadingContainer
-      theme={{
-        fontFamily,
-        fontSize,
-        lineHeight,
-        letterSpacing,
-        textColor,
-      }}
+      letterSpacing={letterSpacing}
+      lineHeight={lineHeight}
+      fontFamily={fontFamily}
+      textColor={textColor}
+      fontSize={fontSize}
     >
       {children}
     </HeadingContainer>

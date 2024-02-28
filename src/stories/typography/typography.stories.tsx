@@ -5,7 +5,7 @@ import {
   FontNameContainer,
   HeadingContainer,
   IconTypography,
-  Information,
+  InformationContainer,
   InformationSection,
   ParagraphContainer,
   Section,
@@ -20,6 +20,27 @@ import { Paragraph } from "../../components/typography/paragraph/paragraph";
 
 export default {
   title: "Typography",
+};
+
+const Information = ({ title, value }: { title: string; value: string }) => {
+  const { theme } = useArtificium();
+
+  return (
+    <InformationContainer>
+      <Paragraph
+        size="m"
+        color={theme.color.primary[400]}
+      >
+        {title}
+      </Paragraph>
+      <Paragraph
+        size="l"
+        color={theme.color.primary[300]}
+      >
+        {value}
+      </Paragraph>
+    </InformationContainer>
+  );
 };
 
 const TypographyCard = () => {
@@ -46,48 +67,18 @@ const TypographyCard = () => {
               ))}
             </SectionTitle>
             <InformationSection>
-              <Information>
-                <Paragraph
-                  size="m"
-                  color={theme.color.primary[400]}
-                >
-                  Size
-                </Paragraph>
-                <Paragraph
-                  size="l"
-                  color={theme.color.primary[300]}
-                >
-                  36px
-                </Paragraph>
-              </Information>
-              <Information>
-                <Paragraph
-                  size="m"
-                  color={theme.color.primary[400]}
-                >
-                  Line Height
-                </Paragraph>
-                <Paragraph
-                  size="l"
-                  color={theme.color.primary[300]}
-                >
-                  44px
-                </Paragraph>
-              </Information>
-              <Information>
-                <Paragraph
-                  size="m"
-                  color={theme.color.primary[400]}
-                >
-                  Letter spacing
-                </Paragraph>
-                <Paragraph
-                  size="l"
-                  color={theme.color.primary[300]}
-                >
-                  0px
-                </Paragraph>
-              </Information>
+              <Information
+                title="Size"
+                value="36px"
+              />
+              <Information
+                title="Line Height"
+                value="44px"
+              />
+              <Information
+                title="Letter Spacing"
+                value="0px"
+              />
             </InformationSection>
           </Section>
         </HeadingContainer>

@@ -5,8 +5,10 @@ export const Row = styled.div`
   gap: 48px;
 `;
 
-export const IconContainer = styled.div`
-  background-color: ${({ theme }) => theme.color.primary[800]};
+export const IconContainer = styled.div<{
+  backgroundColor: string;
+}>`
+  background-color: ${({ backgroundColor }) => backgroundColor};
   padding: 48px;
   display: flex;
   flex-direction: column;

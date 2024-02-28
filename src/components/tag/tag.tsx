@@ -5,7 +5,7 @@ import { Variant } from "../../types/variant";
 import { useTags } from "./useTags";
 
 interface TagProps {
-  name: string;
+  name: string | ReactNode;
   variant?: Variant;
   customColor?: string;
   icon?: ReactNode;

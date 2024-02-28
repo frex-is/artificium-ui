@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react";
+import React, { FC as FunctionalComponent, ReactNode } from "react";
 import { ParagraphContainer } from "./paragraph.style";
-import { useArtificium } from "../../../hooks/useArtificum";
 import { Size } from "../../../types/size";
 import { FontWeight } from "../../../types/fontWeight";
 import { useParagph } from "./useParagraph";
@@ -12,7 +11,12 @@ export interface TextProps {
   color?: string;
 }
 
-export const Paragraph = ({ size, children, fontWeight = "regular", color }: TextProps) => {
+export const Paragraph: FunctionalComponent<TextProps> = ({
+  size,
+  children,
+  fontWeight = "regular",
+  color = undefined,
+}) => {
   const { fontFamily, fontSize, lineHeight, letterSpacing, textColor } = useParagph({
     size,
     fontWeight,
@@ -21,13 +25,11 @@ export const Paragraph = ({ size, children, fontWeight = "regular", color }: Tex
 
   return (
     <ParagraphContainer
-      theme={{
-        fontFamily,
-        fontSize,
-        lineHeight,
-        letterSpacing,
-        textColor,
-      }}
+      letterSpacing={letterSpacing}
+      lineHeight={lineHeight}
+      fontFamily={fontFamily}
+      textColor={textColor}
+      fontSize={fontSize}
     >
       {children}
     </ParagraphContainer>

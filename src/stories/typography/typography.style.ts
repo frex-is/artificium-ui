@@ -4,7 +4,7 @@ export const SubHeader = styled.div`
   padding: 64px;
   background-color: ${({ theme }) => theme.color.primary[700]};
   display: flex;
-  justify-content: sapce-between;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -50,4 +50,4 @@ export const InformationSection = styled.div`
   gap: 48px;
 `;
 
-export const Information = styled.div``;
+export const InformationContainer = styled.div``;

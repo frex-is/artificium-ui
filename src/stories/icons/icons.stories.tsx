@@ -404,7 +404,7 @@ const IconsCard = () => {
 
   return (
     <StoryCard title="Icons">
-      <IconContainer theme={theme}>
+      <IconContainer backgroundColor={theme.color.primary[800]}>
         {listOfChunks.map((iconChunk, i) => (
           <Row key={i}>{iconChunk.map((icon, ii) => icon({ key: ii }))}</Row>
         ))}

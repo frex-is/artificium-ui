@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
-export const Gradient = styled.div`
-  background: linear-gradient(${({ theme }) => theme.direction}, ${({ theme }) => theme.gradient});
+export const Gradient = styled.div<{
+  gradientDirection: string;
+  gradient: string;
+}>`
+  background: linear-gradient(
+    ${({ gradientDirection }) => gradientDirection},
+    ${({ gradient }) => gradient}
+  );
   width: 552px;
   height: 72px;
   border-radius: 8px;
@@ -12,9 +18,11 @@ export const Gradient = styled.div`
   color: ${({ color }) => color};
 `;
 
-export const GradientsContainer = styled.div`
+export const GradientsContainer = styled.div<{
+  backgroundColor: string;
+}>`
   padding: 64px;
-  background-color: ${({ theme }) => theme.color.primary[800]};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   display: flex;
   flex-direction: column;
   gap: 24px;

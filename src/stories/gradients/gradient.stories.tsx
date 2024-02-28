@@ -14,12 +14,13 @@ const GradientCard = () => {
 
   return (
     <StoryCard title="Gradient">
-      <GradientsContainer theme={theme}>
+      <GradientsContainer backgroundColor={theme.color.primary[800]}>
         {Object.entries(theme.gradient).map(([name, gradient]) =>
           gradientDirection.map(direction => (
             <Gradient
-              theme={{ direction, gradient }}
               color={theme.color.primary[700]}
+              gradientDirection={direction}
+              gradient={gradient}
             >
               {name} - {direction}
             </Gradient>

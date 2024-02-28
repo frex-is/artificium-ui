@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledTag = styled.p`
+export const StyledTag = styled.p<{
+  color: string;
+}>`
   color: ${({ color }) => color};
   text-align: center;
   font-weight: 100;
@@ -21,7 +23,9 @@ export const TagContainer = styled.div`
   gap: 8px;
 `;
 
-export const BottomLeftGlow = styled.div`
+export const BottomLeftGlow = styled.div<{
+  color: string;
+}>`
   position: absolute;
   background: ${({ color }) => color};
   width: 40px;
@@ -33,7 +37,9 @@ export const BottomLeftGlow = styled.div`
   opacity: 0.3;
 `;
 
-export const TopRightGlow = styled.div`
+export const TopRightGlow = styled.div<{
+  color: string;
+}>`
   position: absolute;
   background: ${({ color }) => color};
   width: 22px;
