@@ -6,6 +6,7 @@ export const ColorContainer = styled.div<{
 }>`
   padding: 64px;
   display: flex;
+  justify-content: space-between;
   gap: 64px;
   background-color: ${({ backgroundColor }) => backgroundColor};
   border-bottom: 1px solid ${({ borderColor }) => borderColor};
@@ -39,7 +40,7 @@ export const Color = styled.div<{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ textColor }) => textColor};
   font-family: "jakarta";
   border: 1px solid ${({ borderColor }) => borderColor};
 `;

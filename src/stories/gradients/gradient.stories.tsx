@@ -3,6 +3,7 @@ import { ArtificiumProvider } from "../../providers";
 import { StoryCard } from "../utils/story-card/story-card";
 import { Gradient, GradientsContainer } from "./gradient.style";
 import { useArtificium } from "../../hooks/useArtificum";
+import { Paragraph } from "../../components";
 
 export default {
   title: "gradient",
@@ -22,7 +23,13 @@ const GradientCard = () => {
               gradientDirection={direction}
               gradient={gradient}
             >
-              {name} - {direction}
+              <Paragraph
+                color={theme.color.primary[700]}
+                size="l"
+                fontWeight="semi-bold"
+              >
+                {name} - {direction}
+              </Paragraph>
             </Gradient>
           )),
         )}

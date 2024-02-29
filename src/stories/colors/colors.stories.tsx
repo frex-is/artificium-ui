@@ -3,6 +3,7 @@ import { ArtificiumProvider } from "../../providers";
 import { StoryCard } from "../utils/story-card/story-card";
 import { Color, ColorContainer, ColorGridContainer, ColorName } from "./colors.style";
 import { useArtificium } from "../../hooks/useArtificum";
+import { Heading } from "../../components";
 
 export default {
   title: "Colors",
@@ -19,7 +20,12 @@ const ColorsCard = () => {
           backgroundColor={theme.color.primary[800]}
           borderColor={theme.color.primary[600]}
         >
-          <ColorName color={theme.color.primary[0]}>{name}</ColorName>
+          <Heading
+            size="m"
+            fontWeight="semi-bold"
+          >
+            {name}
+          </Heading>
           <ColorGridContainer>
             {Object.entries(shades).map(([shade, color]) => {
               const shadeNumber = Number(shade);
