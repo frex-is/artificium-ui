@@ -8,20 +8,35 @@ interface TagProps {
   name: string | ReactNode;
   variant?: Variant;
   customColor?: string;
+  noGlow?: boolean;
   icon?: ReactNode;
   iconPosition?: "before" | "after";
-  noGlow?: boolean;
   onClick?: () => void;
 }
 
+/**
+ * Represents a tag component with customizable name, variant, color, icon, and click behavior.
+ *
+ * @component
+ * @param props - The properties of the Tag component.
+ * @param props.name - The name or content of the tag.
+ * @param props.variant - The variant of the tag. Possible values: 'primary', 'secondary', 'tertiary'.
+ * @param props.customColor - The custom color of the tag.
+ * @param props.noGlow - Whether to disable the glow effect of the tag.
+ * @param props.icon - The icon to be displayed within the tag.
+ * @param props.iconPosition - The position of the icon relative to the name. Possible values: 'before', 'after'.
+ * @param props.onClick - The function to be called when the tag is clicked.
+ *
+ * @returns {JSX.Element} - Returns a JSX element representing the tag.
+ */
 export const Tag: FunctionalComponent<TagProps> = ({
-  variant = "primary",
-  customColor,
-  icon,
-  iconPosition = "before",
-  onClick,
   name,
-  noGlow,
+  variant = "primary",
+  customColor = undefined,
+  noGlow = false,
+  iconPosition = "before",
+  icon = undefined,
+  onClick = undefined,
 }) => {
   const { color } = useTags({ variant, customColor });
 
