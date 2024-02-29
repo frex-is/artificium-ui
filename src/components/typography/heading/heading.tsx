@@ -17,7 +17,7 @@ export interface HeadingProps {
  * @component
  * @param props `HeadingProps` - The properties of the Heading component.
  * @param props.children `ReactNode` - The children elements to be rendered within the heading.
- * @param props.size `Size`The size of the heading. Possible value are 'xs', 's', 'm', 'l', 'xl'.
+ * @param props.size `Optional<Size></Size>`The size of the heading. Possible value are 'xs', 's', 'm', 'l', 'xl'. Optional, defaults to 'm'
  * @param props.fontWeight `Optional<FontWeight>` - The font weight of the heading. Possible value are 'regular', 'medium', 'semi-bold', 'bold'.
  * @param props.color `Optional<string>` - The color of the heading. Optional, defaults to undefined.
  *
