@@ -9,7 +9,7 @@ export default {
   title: "gradient",
 };
 
-const GradientCard = () => {
+export const Overview = () => {
   const { theme } = useArtificium();
   const gradientDirection = ["to top right", "to bottom left"];
 
@@ -37,9 +37,3 @@ const GradientCard = () => {
     </StoryCard>
   );
 };
-
-export const Overview = () => (
-  <ArtificiumProvider>
-    <GradientCard />
-  </ArtificiumProvider>
-);

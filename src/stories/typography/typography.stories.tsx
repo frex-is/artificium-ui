@@ -45,7 +45,7 @@ const Information = ({ title, value }: { title: string; value: string }) => {
   );
 };
 
-const TypographyCard = () => {
+export const Overview = () => {
   const { theme } = useArtificium();
   const fontWeights: FontWeight[] = ["regular", "medium", "semi-bold", "bold"];
   const sections: any[] = [
@@ -206,9 +206,3 @@ const TypographyCard = () => {
     </StoryCard>
   );
 };
-
-export const Overview = () => (
-  <ArtificiumProvider>
-    <TypographyCard />
-  </ArtificiumProvider>
-);

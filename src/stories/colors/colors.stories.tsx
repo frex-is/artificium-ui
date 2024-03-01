@@ -9,7 +9,7 @@ export default {
   title: "Colors",
 };
 
-const ColorsCard = () => {
+export const Overview = () => {
   const { theme } = useArtificium();
 
   return (
@@ -53,9 +53,3 @@ const ColorsCard = () => {
     </StoryCard>
   );
 };
-
-export const Overview = () => (
-  <ArtificiumProvider>
-    <ColorsCard />
-  </ArtificiumProvider>
-);

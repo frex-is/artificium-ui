@@ -204,7 +204,7 @@ export default {
 
 // TODO : add option to stroke for all icon HF moi du futur :)
 
-const IconsCard = () => {
+export const Overview = () => {
   const { theme } = useArtificium();
   const { listOfChunks } = useChunk(
     [
@@ -412,9 +412,3 @@ const IconsCard = () => {
     </StoryCard>
   );
 };
-
-export const Overview = () => (
-  <ArtificiumProvider>
-    <IconsCard />
-  </ArtificiumProvider>
-);

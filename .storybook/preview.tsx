@@ -1,5 +1,8 @@
+import React from "react";
+
 import type { Preview } from "@storybook/react";
 import { darkTheme } from '../src/theme/theme';
+import { ArtificiumProvider } from '../src/providers/artificium/artificium';
 
 const preview: Preview = {
   parameters: {
@@ -20,6 +23,13 @@ const preview: Preview = {
       ]
     },
   },
+  decorators: [
+    (story) => (
+      <ArtificiumProvider>
+        {story()}
+      </ArtificiumProvider>
+    ),
+  ]
 };
 
 export default preview;

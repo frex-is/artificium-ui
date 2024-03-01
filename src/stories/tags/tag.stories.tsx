@@ -12,7 +12,7 @@ export default {
   component: Tag,
 };
 
-const TagCards = () => {
+export const Overview = () => {
   const { theme } = useArtificium();
 
   return (
@@ -79,9 +79,3 @@ const TagCards = () => {
     </StoryCard>
   );
 };
-
-export const Overview = () => (
-  <ArtificiumProvider>
-    <TagCards />
-  </ArtificiumProvider>
-);
