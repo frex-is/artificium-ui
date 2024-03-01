@@ -1,5 +1,3 @@
-import { Tag } from "./tag/tag";
-import { Paragraph } from "./typography";
-import { Heading } from "./typography";
-
-export { Tag, Paragraph, Heading };
+export * from "./tag/tag";
+export * from "./typography";
+export * from "./typography";

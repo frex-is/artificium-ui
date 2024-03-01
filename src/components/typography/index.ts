@@ -1,4 +1,2 @@
-import { Heading } from "./heading/heading";
-import { Paragraph } from "./paragraph/paragraph";
-
-export { Heading, Paragraph };
+export * from "./heading/heading";
+export * from "./paragraph/paragraph";
