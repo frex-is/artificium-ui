@@ -194,7 +194,6 @@ import {
 } from "../../components/icons";
 import { IconContainer, Row } from "./icons.style";
 import { useChunk } from "../../hooks/useChunk";
-import { ArtificiumProvider } from "../../providers";
 import { useArtificium } from "../../hooks/useArtificum";
 import { StoryCard } from "../utils/story-card/story-card";
 

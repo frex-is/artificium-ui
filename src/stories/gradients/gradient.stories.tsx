@@ -1,5 +1,4 @@
 import React from "react";
-import { ArtificiumProvider } from "../../providers";
 import { StoryCard } from "../utils/story-card/story-card";
 import { Gradient, GradientsContainer } from "./gradient.style";
 import { useArtificium } from "../../hooks/useArtificum";

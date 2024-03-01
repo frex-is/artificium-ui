@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Tag } from "../../components";
-import { ArtificiumProvider } from "../../providers";
 import { StoryCard } from "../utils/story-card/story-card";
 import { BadgeList, BadgesContainer, TagWithIconContainer } from "./tag.style";
 import { useArtificium } from "../../hooks/useArtificum";
