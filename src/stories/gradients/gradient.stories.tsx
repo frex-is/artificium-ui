@@ -15,7 +15,7 @@ export const Overview = () => {
   return (
     <StoryCard title="Gradient">
       <GradientsContainer backgroundColor={theme.color.primary[800]}>
-        {Object.entries(theme.gradient).map(([name, gradient]) =>
+        {Object.entries(theme.gradient).map(([name, gradient]: [string, string]) =>
           gradientDirection.map(direction => (
             <Gradient
               color={theme.color.primary[700]}

@@ -3,6 +3,7 @@ import { StoryCard } from "../utils/story-card/story-card";
 import { Color, ColorContainer, ColorGridContainer, ColorName } from "./colors.style";
 import { useArtificium } from "../../hooks/useArtificum";
 import { Heading } from "../../components";
+import { ColorShades } from "../../types/theme";
 
 export default {
   title: "Colors",
@@ -13,7 +14,7 @@ export const Overview = () => {
 
   return (
     <StoryCard title="Colors">
-      {Object.entries(theme.color).map(([name, shades]) => (
+      {Object.entries(theme.color).map(([name, shades]: [string, ColorShades]) => (
         <ColorContainer
           key={name}
           backgroundColor={theme.color.primary[800]}
@@ -26,7 +27,7 @@ export const Overview = () => {
             {name}
           </Heading>
           <ColorGridContainer>
-            {Object.entries(shades).map(([shade, color]) => {
+            {Object.entries(shades).map(([shade, color]: [string, string]) => {
               const shadeNumber = Number(shade);
               const isRendered = shadeNumber > 0;
               const textColor = shadeNumber > 400 ? shades[100] : shades[900];
