@@ -1,1 +1,1 @@
-export type FontWeight = "regular" | "medium" | "semi-bold" | "bold";
+export type FontWeight = "regular" | "medium" | "semiBold" | "bold";

@@ -1,7 +1,7 @@
 import React from "react";
 
 import type { Preview } from "@storybook/react";
-import { darkTheme } from '../src/theme/theme';
+import { defaultTheme } from '../src/theme/theme';
 import { ArtificiumProvider } from '../src/providers/artificium/artificium';
 
 const preview: Preview = {
@@ -18,7 +18,7 @@ const preview: Preview = {
       values: [
         {
           name: 'dark',
-          value: darkTheme.color.primary[900],
+          value: defaultTheme.color.primary[900],
         }
       ]
     },

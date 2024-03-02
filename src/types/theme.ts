@@ -16,6 +16,36 @@ export type Gradient = {
   tertiary: string;
 };
 
+export type FontInformation = {
+  size: {
+    xs: string;
+    s: string;
+    m: string;
+    l: string;
+    xl: string;
+  };
+  family: {
+    bold: string;
+    semiBold: string;
+    medium: string;
+    regular: string;
+  };
+  lineHeight: {
+    xs: string;
+    s: string;
+    m: string;
+    l: string;
+    xl: string;
+  };
+  letterSpacing: {
+    xs: string;
+    s: string;
+    m: string;
+    l: string;
+    xl: string;
+  };
+};
+
 export type ArtificiumTheme = {
   color: {
     primary: ColorShades & {
@@ -32,9 +62,7 @@ export type ArtificiumTheme = {
   };
   gradient: Gradient;
   font: {
-    bold: string;
-    semiBold: string;
-    medium: string;
-    regular: string;
+    paragraph: FontInformation;
+    heading: FontInformation;
   };
 };

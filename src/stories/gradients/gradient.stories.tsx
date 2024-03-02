@@ -25,7 +25,7 @@ export const Overview = () => {
               <Paragraph
                 color={theme.color.primary[700]}
                 size="l"
-                fontWeight="semi-bold"
+                fontWeight="semiBold"
               >
                 {name} - {direction}
               </Paragraph>

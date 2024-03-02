@@ -91,9 +91,63 @@ export const defaultTheme: ArtificiumTheme = {
     tertiary: "#B6F09C 0%, #82DBF7 100%",
   },
   font: {
-    bold: "jakarta-bold",
-    semiBold: "jakarta-semi-bold",
-    medium: "jakarta-medium",
-    regular: "jakarta-regular",
+    paragraph: {
+      size: {
+        xs: "10px",
+        s: "12px",
+        m: "14px",
+        l: "16px",
+        xl: "18px",
+      },
+      family: {
+        bold: "jakarta-bold",
+        semiBold: "jakarta-semi-bold",
+        medium: "jakarta-medium",
+        regular: "jakarta-regular",
+      },
+      lineHeight: {
+        xs: "16px",
+        s: "18px",
+        m: "20px",
+        l: "24px",
+        xl: "28px",
+      },
+      letterSpacing: {
+        xs: "0.15px",
+        s: "0.15px",
+        m: "0.15px",
+        l: "0.15px",
+        xl: "0.15px",
+      },
+    },
+    heading: {
+      size: {
+        xs: "20px",
+        s: "24px",
+        m: "28px",
+        l: "32px",
+        xl: "36px",
+      },
+      family: {
+        bold: "jakarta-bold",
+        semiBold: "jakarta-semi-bold",
+        medium: "jakarta-medium",
+        regular: "jakarta-regular",
+      },
+      lineHeight: {
+        xs: "28px;",
+        s: "32px",
+        m: "36px",
+        l: "40px",
+        xl: "44px",
+      },
+      letterSpacing: {
+        xs: "0px",
+        s: "0px",
+        m: "0px",
+        l: "0px",
+        xl: "0px",
+      },
+    },
   },
 };

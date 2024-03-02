@@ -22,7 +22,7 @@ export const Overview = () => {
         >
           <Heading
             size="m"
-            fontWeight="semi-bold"
+            fontWeight="semiBold"
           >
             {name}
           </Heading>

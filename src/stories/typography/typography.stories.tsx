@@ -17,7 +17,8 @@ import {
 import { useArtificium } from "../../hooks/useArtificum";
 import { Heading } from "../../components/typography/heading/heading";
 import { FontWeight } from "../../types/fontWeight";
-import { Paragraph } from "../../components/typography/paragraph/paragraph";
+import { Paragraph } from '../../components/typography/paragraph/paragraph';
+import { Size } from "../../types/size";
 
 export default {
   title: "Typography",
@@ -46,49 +47,24 @@ const Information = ({ title, value }: { title: string; value: string }) => {
 
 export const Overview = () => {
   const { theme } = useArtificium();
-  const fontWeights: FontWeight[] = ["regular", "medium", "semi-bold", "bold"];
-  const sections: any[] = [
-    {
-      size: "xl",
-      information: {
-        size: "36px",
-        lineHeight: "44px",
-        letterSpacing: "0",
-      },
+  const fontWeights: FontWeight[] = ["regular", "medium", "semiBold", "bold"];
+  const sizes: Size[] = ["xl", "l", "m", "s", "xs"];
+  const headingSections: any[] = sizes.map(size => ({
+    size: size,
+    information: {
+      size: theme.font.heading.size[size],
+      lineHeight: theme.font.heading.lineHeight[size],
+      letterSpacing: theme.font.heading.letterSpacing[size],
     },
-    {
-      size: "l",
-      information: {
-        size: "32px",
-        lineHeight: "40px",
-        letterSpacing: "0",
-      },
+  }));
+  const ParagraphSections: any[] = sizes.map(size => ({
+    size: size,
+    information: {
+      size: theme.font.paragraph.size[size],
+      lineHeight: theme.font.paragraph.lineHeight[size],
+      letterSpacing: theme.font.paragraph.letterSpacing[size],
     },
-    {
-      size: "m",
-      information: {
-        size: "28px",
-        lineHeight: "36px",
-        letterSpacing: "0",
-      },
-    },
-    {
-      size: "s",
-      information: {
-        size: "24px",
-        lineHeight: "32px",
-        letterSpacing: "0",
-      },
-    },
-    {
-      size: "xs",
-      information: {
-        size: "20px",
-        lineHeight: "28px",
-        letterSpacing: "0",
-      },
-    },
-  ];
+  }));
 
   return (
     <StoryCard title="Typography">
@@ -96,7 +72,7 @@ export const Overview = () => {
         <FontNameContainer theme={theme}>
           <Heading
             size="xl"
-            fontWeight="semi-bold"
+            fontWeight="semiBold"
           >
             Plus Jakarta Sans
           </Heading>
@@ -110,7 +86,7 @@ export const Overview = () => {
             <Circle color={theme.color.primary[400]} />
             <Heading
               size="xs"
-              fontWeight="semi-bold"
+              fontWeight="semiBold"
             >
               SemiBold
             </Heading>
@@ -134,8 +110,8 @@ export const Overview = () => {
       </SubHeader>
       <TypographyContainer backgroundColor={theme.color.primary[800]}>
         <HeadingContainer borderColor={theme.color.primary[600]}>
-          {sections.map((section, index) => {
-            const isLastSection = index === sections.length - 1;
+          {headingSections.map((section, index) => {
+            const isLastSection = index === headingSections.length - 1;
 
             return (
               <Section borderColor={isLastSection ? "none" : theme.color.primary[600]}>
@@ -168,8 +144,8 @@ export const Overview = () => {
           })}
         </HeadingContainer>
         <ParagraphContainer>
-          {sections.map((section, index) => {
-            const isLastSection = index === sections.length - 1;
+          {ParagraphSections.map((section, index) => {
+            const isLastSection = index === headingSections.length - 1;
 
             return (
               <Section borderColor={isLastSection ? "none" : theme.color.primary[600]}>
