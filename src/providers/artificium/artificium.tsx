@@ -1,17 +1,18 @@
 import React, { createContext, FC as FunctionalComponent, ReactNode, useState } from "react";
-import { ArtificiumTheme, darkTheme } from "../../theme/theme";
+import { darkTheme } from "../../theme/theme";
+import { ArtificiumTheme } from "../../types/theme";
 import { GlobalStyle } from "../../global.style";
 
 interface ArtificiumProviderProps {
   children: ReactNode;
 }
 
-export interface IArtificiumContext {
+export interface ArtificiumContextProps {
   theme: ArtificiumTheme;
   setTheme: (theme: ArtificiumTheme) => void;
 }
 
-export const ArtificiumContext = createContext<IArtificiumContext>({
+export const ArtificiumContext = createContext<ArtificiumContextProps>({
   theme: darkTheme,
   setTheme: () => {},
 });
