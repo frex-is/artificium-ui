@@ -6,7 +6,7 @@
  *
  * @returns `{ listOfChunks: any[][] }` - An object containing the list of chunks.
  */
-export const useChunk = (items: any[], chunkSize: number) => {
+export const useChunk = (items: any[], chunkSize: number): { listOfChunks: any[][] } => {
   const createChunks = (array: any[], chunkSize: number) =>
     Array.from({ length: Math.ceil(array.length / chunkSize) }, (_, i) =>
       array.slice(i * chunkSize, (i + 1) * chunkSize),

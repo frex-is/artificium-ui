@@ -13,7 +13,14 @@ import { ArtificiumContextError } from "../errors/artificiumContextError";
  * ```jsx
  * const MyComponent = () => {
  *   const artificiumContext = useArtificium();
- *   // Use artificiumContext here...
+ *
+ *   // Access the current theme:
+ *   const currentTheme = artificiumContext.theme;
+ *
+ *   // Update the theme:
+ *   artificiumContext.setTheme(newTheme);
+ *
+ *   // ...
  * };
  * ```
  */
