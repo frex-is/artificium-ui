@@ -17,7 +17,7 @@ import {
 import { useArtificium } from "../../hooks/useArtificum";
 import { Heading } from "../../components/typography/heading/heading";
 import { FontWeight } from "../../types/fontWeight";
-import { Paragraph } from '../../components/typography/paragraph/paragraph';
+import { Paragraph } from "../../components/typography/paragraph/paragraph";
 import { Size } from "../../types/size";
 
 export default {
