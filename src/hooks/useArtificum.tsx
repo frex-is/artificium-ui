@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ArtificiumContext } from "../providers/artificium/artificium";
+import { ArtificiumContext, ArtificiumContextProps } from "../providers/artificium/artificium";
 import { ArtificiumContextError } from "../errors/artificiumContextError";
 
 /**
@@ -17,7 +17,7 @@ import { ArtificiumContextError } from "../errors/artificiumContextError";
  * };
  * ```
  */
-export const useArtificium = () => {
+export const useArtificium = (): ArtificiumContextProps => {
   const context = useContext(ArtificiumContext);
 
   if (!context) {

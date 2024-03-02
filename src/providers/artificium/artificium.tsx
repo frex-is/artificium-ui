@@ -1,5 +1,5 @@
 import React, { createContext, FC as FunctionalComponent, ReactNode, useState } from "react";
-import { darkTheme } from "../../theme/theme";
+import { defaultTheme } from "../../theme/theme";
 import { ArtificiumTheme } from "../../types/theme";
 import { GlobalStyle } from "../../global.style";
 
@@ -8,12 +8,19 @@ interface ArtificiumProviderProps {
 }
 
 export interface ArtificiumContextProps {
+  /**
+   * The current Artificum theme object, containing properties like colors, fonts, and other styling information.
+   */
   theme: ArtificiumTheme;
+  /**
+   * A function to update the Artificium theme.
+   * Pass a new `ArtificiumTheme` object as an argument to apply the changes.
+   */
   setTheme: (theme: ArtificiumTheme) => void;
 }
 
 export const ArtificiumContext = createContext<ArtificiumContextProps>({
-  theme: darkTheme,
+  theme: defaultTheme,
   setTheme: () => {},
 });
 
@@ -44,7 +51,7 @@ export const ArtificiumContext = createContext<ArtificiumContextProps>({
  * ```
  */
 export const ArtificiumProvider: FunctionalComponent<ArtificiumProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState(darkTheme);
+  const [theme, setTheme] = useState(defaultTheme);
 
   return (
     <ArtificiumContext.Provider value={{ theme, setTheme }}>

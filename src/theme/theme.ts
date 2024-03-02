@@ -1,6 +1,6 @@
 import { ArtificiumTheme } from "../types/theme";
 
-export const darkTheme: ArtificiumTheme = {
+export const defaultTheme: ArtificiumTheme = {
   color: {
     primary: {
       0: "#FFFFFF",
