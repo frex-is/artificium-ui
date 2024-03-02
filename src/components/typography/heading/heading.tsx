@@ -1,4 +1,4 @@
-import React, { FC as FunctionalComponent, ReactNode } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import { HeadingContainer } from "./heading.style";
 import { Size } from "../../../types/size";
 import { FontWeight } from "../../../types/fontWeight";
@@ -23,7 +23,7 @@ export interface HeadingProps {
  *
  * @returns {JSX.Element} - Return a JSX element  representing the heading.
  */
-export const Heading: FunctionalComponent<HeadingProps> = ({
+export const Heading: FunctionComponent<HeadingProps> = ({
   children,
   size = "m",
   color = undefined,

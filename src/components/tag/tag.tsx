@@ -1,4 +1,4 @@
-import React, { FC as FunctionalComponent, ReactNode } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 
 import { StyledTag, BottomLeftGlow, TopRightGlow, TagContainer } from "./tag.style";
 import { Variant } from "../../types/variant";
@@ -29,7 +29,7 @@ interface TagProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the tag.
  */
-export const Tag: FunctionalComponent<TagProps> = ({
+export const Tag: FunctionComponent<TagProps> = ({
   name,
   variant = "primary",
   customColor = undefined,

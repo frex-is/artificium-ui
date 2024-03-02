@@ -1,4 +1,4 @@
-import React, { FC as FunctionalComponent, ReactNode } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import { ParagraphContainer } from "./paragraph.style";
 import { Size } from "../../../types/size";
 import { FontWeight } from "../../../types/fontWeight";
@@ -11,7 +11,7 @@ export interface ParagraphProps {
   color?: string;
 }
 
-export const Paragraph: FunctionalComponent<ParagraphProps> = ({
+export const Paragraph: FunctionComponent<ParagraphProps> = ({
   size,
   children,
   fontWeight = "regular",
