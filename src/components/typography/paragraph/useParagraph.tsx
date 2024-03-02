@@ -8,7 +8,7 @@ interface useParagraphProps {
   color?: string;
 }
 
-export const useParagph = ({ size, fontWeight, color }: useParagraphProps) => {
+export const useParagraph = ({ size, fontWeight, color }: useParagraphProps) => {
   const { theme } = useArtificium();
 
   const getFontSize = () => {
