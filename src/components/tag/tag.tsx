@@ -38,12 +38,17 @@ export const Tag: FunctionComponent<TagProps> = ({
   icon = undefined,
   onClick = undefined,
 }) => {
-  const { color } = useTags({ variant, customColor });
+  const { fontFamily, color } = useTags({ variant, customColor });
 
   return (
     <TagContainer onClick={onClick}>
       {iconPosition === "before" && icon}
-      <StyledTag color={color}>{name}</StyledTag>
+      <StyledTag
+        fontFamily={fontFamily}
+        color={color}
+      >
+        {name}
+      </StyledTag>
       {!noGlow && (
         <>
           <BottomLeftGlow color={color} />

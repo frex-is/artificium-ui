@@ -8,6 +8,7 @@ export interface useTagsProps {
 
 export const useTags = ({ variant, customColor }: useTagsProps) => {
   const { theme } = useArtificium();
+
   const colors = {
     primary: theme.color.primary[300],
     secondary: theme.color.secondary[300],
@@ -19,7 +20,9 @@ export const useTags = ({ variant, customColor }: useTagsProps) => {
     error: theme.color.error[600],
     valid: theme.color.primary[300],
   };
-  const color = customColor ?? colors[variant];
 
-  return { color };
+  const color = customColor ?? colors[variant];
+  const fontFamily = theme.font.paragraph.family.bold;
+
+  return { fontFamily, color };
 };

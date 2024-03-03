@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const StyledTag = styled.p<{
   color: string;
+  fontFamily: string;
 }>`
   color: ${({ color }) => color};
   text-align: center;
   font-weight: 100;
-  font-family: "jakarta";
+  font-family: ${({ fontFamily }) => fontFamily};
 `;
 
 export const TagContainer = styled.div`
