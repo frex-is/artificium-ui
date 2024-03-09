@@ -6,11 +6,11 @@
 
 [![Frex-is](https://img.shields.io/badge/Github-Frex--is-%23181717?logo=github)](https://github.com/frex-is)
 
-### Description:
+### ✏️ Description:
 
 Artificium UI Library is a versatile and responsive React component library built with TypeScript. This library is designed to seamlessly integrate into your React projects, providing a collection of reusable UI components inspired by the [Artificium](https://www.figma.com/community/file/1237505388738737733) Figma design who was created by [Mikołaj Niżnik](https://www.figma.com/@mniznik).
 
-### Install and Run the application (Local Development):
+### 🖥️ Install and Run the application (Local Development):
 
 Requirements:
 - [Node.js v20.10.0 or later](https://nodejs.org/en/download).
@@ -33,7 +33,7 @@ npm install
 npm run storybook
 ```
 
-### Install and Run the application (Containerized Development):
+### 🐋 Install and Run the application (Containerized Development):
 
 Requirements:
 - [Docker](https://www.docker.com/products/docker-desktop/).
@@ -71,6 +71,6 @@ npm run storybook
 npm run storybook
 ```
 
-### License
+### ©️ License
 
 This project is licensed under the [MIT License](https://github.com/frex-is/artificium-ui?tab=MIT-1-ov-file#readme).

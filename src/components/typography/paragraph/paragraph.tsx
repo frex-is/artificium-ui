@@ -9,6 +9,7 @@ export interface ParagraphProps {
   size: Size;
   fontWeight?: FontWeight;
   color?: string;
+  isSpan?: boolean;
 }
 
 export const Paragraph: FunctionComponent<ParagraphProps> = ({
@@ -16,6 +17,7 @@ export const Paragraph: FunctionComponent<ParagraphProps> = ({
   children,
   fontWeight = "regular",
   color = undefined,
+  isSpan = false,
 }) => {
   const { fontFamily, fontSize, lineHeight, letterSpacing, textColor } = useParagraph({
     size,
@@ -30,6 +32,7 @@ export const Paragraph: FunctionComponent<ParagraphProps> = ({
       fontFamily={fontFamily}
       textColor={textColor}
       fontSize={fontSize}
+      isSpan={isSpan}
     >
       {children}
     </ParagraphContainer>

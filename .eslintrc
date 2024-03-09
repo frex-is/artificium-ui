@@ -3,6 +3,9 @@
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": ["./tsconfig.json"] },
+  "env": {
+    "browser": true
+  },
   "rules": {
     /*
      * The 'no-unused-vars' rule is turned off here because it generates

@@ -11,9 +11,9 @@ export const CheckCircleIcon = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path
-      stroke="#686B6E"
+      stroke={props.stroke ?? "#686B6E"}
       strokeLinecap="round"
-      strokeWidth={1.5}
+      strokeWidth={props.strokeWidth ?? 1.5}
       d="m8 12 2.293 2.293a1 1 0 0 0 1.414 0L16 10m5 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
     />
   </svg>
