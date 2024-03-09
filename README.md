@@ -1,5 +1,7 @@
 # Artificium UI Library
 
+![artificium UI banner](assets/md/banner_artificium.png)
+
 ### Maintainers
 
 [![Frex-is](https://img.shields.io/badge/Github-Frex--is-%23181717?logo=github)](https://github.com/frex-is)
