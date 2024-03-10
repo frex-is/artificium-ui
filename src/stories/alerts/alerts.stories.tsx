@@ -70,7 +70,40 @@ export const Overview = () => {
         <PreviewAlertsContainer
           backgroundColor={theme.color.primary[700]}
           borderColor={theme.color.primary[500]}
-        ></PreviewAlertsContainer>
+        >
+          <Alert
+            alertType="information"
+            duration="infinite"
+            title="Title"
+            isClosable
+          >
+            Artificium can memorize things.
+          </Alert>
+          <Alert
+            alertType="warn"
+            duration="infinite"
+            title="Title"
+            isClosable
+          >
+            This action cannot be undone.
+          </Alert>
+          <Alert
+            alertType="error"
+            duration="infinite"
+            title="Title"
+            isClosable
+          >
+            Please try again later.
+          </Alert>
+          <Alert
+            alertType="success"
+            duration="infinite"
+            title="Title"
+            isClosable
+          >
+            Your changes have been saved.
+          </Alert>
+        </PreviewAlertsContainer>
 
         <PreviewAlertsContainer
           backgroundColor={theme.color.primary[700]}

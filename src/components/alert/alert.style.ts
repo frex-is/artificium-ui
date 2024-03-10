@@ -21,3 +21,15 @@ export const AlertIconContainer = styled.div<{
   filter: drop-shadow(0px 5px 15px ${({ color }) => color});
   overflow: hidden;
 `;
+
+export const AlertTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const AlertTitleContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;

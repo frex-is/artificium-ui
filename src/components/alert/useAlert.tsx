@@ -8,11 +8,12 @@ import { Duration } from "../../types/duration";
 export interface useAlertProps {
   alertType: AlertType;
   duration: Duration;
+  title: ReactNode;
   children: ReactNode;
   onClose: (isExitingByUser: boolean) => void;
 }
 
-export const useAlert = ({ alertType, duration, children, onClose }: useAlertProps) => {
+export const useAlert = ({ alertType, duration, children, onClose, title }: useAlertProps) => {
   const { theme } = useArtificium();
   const [visible, setVisible] = useState(true);
 
@@ -80,8 +81,28 @@ export const useAlert = ({ alertType, duration, children, onClose }: useAlertPro
     );
   };
 
+  const getTitleComponent = (): ReactNode => {
+    const titleAlreadyBuilt = typeof title !== "string" && typeof title !== "number";
+
+    if (titleAlreadyBuilt) {
+      return title;
+    }
+
+    return (
+      <Paragraph
+        size="l"
+        fontWeight="semiBold"
+        color={theme.color.primary[0]}
+        isSpan
+      >
+        {title}
+      </Paragraph>
+    );
+  };
+
   const icon = getAlertIcon();
+  const titleComponent = getTitleComponent();
   const message = getMessage();
 
-  return { alertColor, message, icon, visible, closeAlert };
+  return { titleComponent, alertColor, message, icon, visible, closeAlert };
 };
