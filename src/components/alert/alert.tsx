@@ -3,16 +3,24 @@ import { useAlert } from "./useAlert";
 import { AlertContainer, AlertIconContainer } from "./alert.style";
 import { useArtificium } from "../../hooks/useArtificum";
 import { AlertType } from "../../types/alertType";
-import { Paragraph } from "../typography";
+import { CrossCircleIcon } from "../icons";
+import { Duration } from "../../types/duration";
 
 export interface AlertProps {
   alertType: AlertType;
-  duration: number;
-  onClose: (isExitingByUser: boolean) => void;
+  duration: Duration;
+  onClose?: (isExitingByUser: boolean) => void;
   children: ReactNode;
+  isClosable?: boolean;
 }
 
-export const Alert = ({ alertType, duration, onClose, children }: AlertProps) => {
+export const Alert = ({
+  alertType,
+  duration,
+  onClose,
+  children,
+  isClosable = false,
+}: AlertProps) => {
   const { theme } = useArtificium();
   const { alertColor, message, icon, visible, closeAlert } = useAlert({
     alertType,
@@ -22,18 +30,17 @@ export const Alert = ({ alertType, duration, onClose, children }: AlertProps) =>
   });
 
   return (
-    <AlertContainer backgroundColor={theme.color.primary[900]}>
+    <AlertContainer
+      isVisible={visible}
+      backgroundColor={theme.color.primary[900]}
+    >
       <AlertIconContainer color={alertColor}>{icon}</AlertIconContainer> {message}
+      {isClosable && (
+        <CrossCircleIcon
+          style={{ cursor: "pointer" }}
+          onClick={() => closeAlert()}
+        />
+      )}
     </AlertContainer>
   );
 };
-
-/**
- * <Paragraph
-        size="s"
-        fontWeight="semiBold"
-        color={theme.color.error[600]}
-      >
-        Something went wrong.
-      </Paragraph>
- */

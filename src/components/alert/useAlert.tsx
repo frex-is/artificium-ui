@@ -3,10 +3,11 @@ import { AlertType } from "../../types/alertType";
 import { AlertHexagonIcon, AlertTriangleIcon, BulbIcon, CheckCircleIcon } from "../icons";
 import { Paragraph } from "../typography";
 import { useArtificium } from "../../hooks/useArtificum";
+import { Duration } from "../../types/duration";
 
 export interface useAlertProps {
   alertType: AlertType;
-  duration: number;
+  duration: Duration;
   children: ReactNode;
   onClose: (isExitingByUser: boolean) => void;
 }
@@ -23,6 +24,10 @@ export const useAlert = ({ alertType, duration, children, onClose }: useAlertPro
   }[alertType];
 
   useEffect(() => {
+    if (duration === "infinite") {
+      return;
+    }
+
     const timer = setTimeout(() => {
       setVisible(false);
       onClose(false);

@@ -5,9 +5,12 @@ export const AlertContainer = styled.div<{
 }>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 `;
 
-export const AutoCloseAlertsContainer = styled.div<{
+export const PreviewAlertsContainer = styled.div<{
   backgroundColor: string;
   borderColor: string;
 }>`
