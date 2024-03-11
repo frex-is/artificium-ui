@@ -5,6 +5,7 @@ export const NavigationContainer = styled.div<{
 }>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   padding: 32px;
+  width: 350px;
 `;
 
 export const NavigationItemContainer = styled.div<{
