@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/stories/avatars/avatar.stories.tsxx"],
   "exclude": ["node_modules"],
-  "files": ["assets/font/fonts.d.ts"]
+  "files": ["assets/font/fonts.d.ts", "assets/svg/profils/profils.d.ts"]
 }
