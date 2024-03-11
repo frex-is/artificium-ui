@@ -25,8 +25,8 @@ export const StoryCard = ({ title, children }: StoryCardProps) => {
         <ArtificiumIcon
           stroke={theme.color.secondary[700]}
           strokeWidth={1}
-          width={80}
-          height={80}
+          width={40}
+          height={40}
         />
       </HeaderContainer>
       {children}
