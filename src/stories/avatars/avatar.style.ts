@@ -43,3 +43,9 @@ export const StatusContainer = styled.div<{
   gap: 16px;
   width: fit-content;
 `;
+
+export const ExtraContainer = styled.div`
+  display: flex;
+  gap: 32px;
+  align-items: center;
+`;

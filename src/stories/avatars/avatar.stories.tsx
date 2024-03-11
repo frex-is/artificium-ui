@@ -16,9 +16,15 @@ import OliviaSharma from "../../../assets/svg/profils/OliviaSharma.svg";
 import RyanLee from "../../../assets/svg/profils/RyanLee.svg";
 import SophiaZhang from "../../../assets/svg/profils/SophiaZhang.svg";
 import TylerPatel from "../../../assets/svg/profils/TylerPatel.svg";
-import { AvatarsContainer, ContentContainer, StatusContainer } from "./avatar.style";
+import {
+  AvatarsContainer,
+  ContentContainer,
+  ExtraContainer,
+  StatusContainer,
+} from "./avatar.style";
 import { useArtificium } from "../../hooks/useArtificum";
 import { Status } from "../../components/status/status";
+import { User } from "../../components/user/user";
 
 export default {
   title: "Avatars",
@@ -34,32 +40,103 @@ export const Overview = () => {
           backgroundColor={theme.color.primary[800]}
           borderColor={theme.color.primary[500]}
         >
-          <Avatar avatar={AdamGreen} />
-          <Avatar avatar={AndrewGarcia} />
-          <Avatar avatar={AvaGupta} />
-          <Avatar avatar={BenjaminKim} />
-          <Avatar avatar={DavidSingh} />
-          <Avatar avatar={EmilyLiu} />
-          <Avatar avatar={HarperSingh} />
-          <Avatar avatar={IsabellaChen} />
-          <Avatar avatar={LilyPatel} />
-          <Avatar avatar={MarcusChen} />
-          <Avatar avatar={MiaPark} />
-          <Avatar avatar={OliviaSharma} />
-          <Avatar avatar={RyanLee} />
-          <Avatar avatar={SophiaZhang} />
-          <Avatar avatar={TylerPatel} />
-          <Avatar avatar={AdamGreen} />
+          <Avatar
+            avatar={AdamGreen}
+            status="online"
+            withStatus
+          />
+          <Avatar
+            avatar={AndrewGarcia}
+            status="away"
+            withStatus
+          />
+          <Avatar
+            avatar={AvaGupta}
+            status="busy"
+            withStatus
+          />
+          <Avatar
+            avatar={BenjaminKim}
+            status="offline"
+            withStatus
+          />
+          <Avatar
+            avatar={DavidSingh}
+            status="online"
+            withStatus
+          />
+          <Avatar
+            avatar={EmilyLiu}
+            status="away"
+            withStatus
+          />
+          <Avatar
+            avatar={HarperSingh}
+            status="busy"
+            withStatus
+          />
+          <Avatar
+            avatar={IsabellaChen}
+            status="offline"
+            withStatus
+          />
+          <Avatar
+            avatar={LilyPatel}
+            status="online"
+            withStatus
+          />
+          <Avatar
+            avatar={MarcusChen}
+            status="away"
+            withStatus
+          />
+          <Avatar
+            avatar={MiaPark}
+            status="busy"
+            withStatus
+          />
+          <Avatar
+            avatar={OliviaSharma}
+            status="offline"
+            withStatus
+          />
+          <Avatar
+            avatar={RyanLee}
+            status="online"
+            withStatus
+          />
+          <Avatar
+            avatar={SophiaZhang}
+            status="away"
+            withStatus
+          />
+          <Avatar
+            avatar={TylerPatel}
+            status="busy"
+            withStatus
+          />
+          <Avatar
+            avatar={AdamGreen}
+            status="offline"
+            withStatus
+          />
         </AvatarsContainer>
-        <StatusContainer
-          backgroundColor={theme.color.primary[800]}
-          borderColor={theme.color.primary[500]}
-        >
-          <Status type="online" />
-          <Status type="away" />
-          <Status type="busy" />
-          <Status type="offline" />
-        </StatusContainer>
+        <ExtraContainer>
+          <User
+            username="Intellisys"
+            subname="12 members"
+            avatar={OliviaSharma}
+          />
+          <StatusContainer
+            backgroundColor={theme.color.primary[800]}
+            borderColor={theme.color.primary[500]}
+          >
+            <Status type="online" />
+            <Status type="away" />
+            <Status type="busy" />
+            <Status type="offline" />
+          </StatusContainer>
+        </ExtraContainer>
       </ContentContainer>
     </StoryCard>
   );
