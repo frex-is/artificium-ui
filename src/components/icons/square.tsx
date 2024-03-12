@@ -15,7 +15,7 @@ export const SquareIcon = (props: SVGProps<SVGSVGElement>) => (
       height={18}
       x={3}
       y={3}
-      stroke="#686B6E"
+      stroke={props.stroke ?? "#686B6E"}
       strokeLinecap="round"
       strokeWidth={1.5}
       rx={3}

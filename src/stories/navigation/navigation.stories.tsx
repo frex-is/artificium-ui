@@ -1,9 +1,15 @@
 import React from "react";
 import { StoryCard } from "../utils/story-card/story-card";
 import { NavigationItem } from "../../components/navigation/item/navigation-item";
-import { TriangleIcon } from "../../components/icons";
+import { SquareIcon, TriangleIcon } from "../../components/icons";
 import { useArtificium } from "../../hooks/useArtificum";
-import { NavigationContainer, NavigationItemContainer } from "./navigation.style";
+import {
+  NavigationContainer,
+  NavigationItemsContainer,
+  NavigationTabsContainer,
+  TabsContainer,
+} from "./navigation.style";
+import { Tab } from "../../components/navigation/tab/tab";
 
 export default {
   title: "Navigation",
@@ -15,7 +21,7 @@ export const Overview = () => {
   return (
     <StoryCard title="Navigation">
       <NavigationContainer backgroundColor={theme.color.primary[800]}>
-        <NavigationItemContainer
+        <NavigationItemsContainer
           backgroundColor={theme.color.primary[700]}
           borderColor={theme.color.primary[500]}
         >
@@ -30,7 +36,24 @@ export const Overview = () => {
             shortcut="⌘ S"
             isActive
           />
-        </NavigationItemContainer>
+        </NavigationItemsContainer>
+
+        <NavigationTabsContainer
+          backgroundColor={theme.color.primary[700]}
+          borderColor={theme.color.primary[500]}
+        >
+          <TabsContainer>
+            <Tab
+              icon={<SquareIcon />}
+              label="Overview"
+            />
+            <Tab
+              icon={<SquareIcon stroke={theme.color.quinary[500]} />}
+              label="Overview"
+              isActive
+            />
+          </TabsContainer>
+        </NavigationTabsContainer>
       </NavigationContainer>
     </StoryCard>
   );

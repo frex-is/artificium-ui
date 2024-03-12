@@ -13,6 +13,7 @@ export const NavigationItemContainer = styled.div<{
     isActive
       ? "0px 1px 3px #0806060D, 0px 1px 2px #0806060D, 0px 2px 12px #1A1D21A3 inset"
       : "none"};
+  cursor: pointer;
 `;
 
 export const NavigationInformationContainer = styled.div`
