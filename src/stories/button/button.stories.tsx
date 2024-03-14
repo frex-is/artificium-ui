@@ -10,8 +10,6 @@ export default {
   title: "Button",
 };
 
-const IconsButton = () => 
-
 export const Overview = () => {
   const { theme } = useArtificium();
   const sizes = ["s", "m", "l"];
