@@ -11,7 +11,7 @@ export const DashedContainer = ({ children }: DashedContainerProps) => {
 
   return (
     <Dashed
-      backgroundColor={theme.color.primary[800]}
+      backgroundColor={theme.color.primary[700]}
       borderColor={theme.color.primary[500]}
     >
       {children}

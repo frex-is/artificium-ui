@@ -17,7 +17,7 @@ export const Overview = () => {
 
   return (
     <StoryCard title="Buttons">
-      <IconContainer>
+      <IconContainer backgroundColor={theme.color.primary[800]}>
         <DashedContainer>
           <Column>
             <IconButton
@@ -102,6 +102,28 @@ export const Overview = () => {
             <IconButton
               variant="primary"
               type="ghost"
+              icon={<AlertCircleIcon stroke={theme.color.primary[200]} />}
+              size="l"
+              forceState="active"
+            />
+          </Column>
+          <Column>
+            <IconButton
+              variant="primary"
+              type="glass"
+              icon={<AlertCircleIcon stroke={theme.color.primary[200]} />}
+              size="l"
+            />
+            <IconButton
+              variant="primary"
+              type="glass"
+              icon={<AlertCircleIcon stroke={theme.color.primary[200]} />}
+              size="l"
+              forceState="hover"
+            />
+            <IconButton
+              variant="primary"
+              type="glass"
               icon={<AlertCircleIcon stroke={theme.color.primary[200]} />}
               size="l"
               forceState="active"

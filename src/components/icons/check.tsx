@@ -11,9 +11,9 @@ export const CheckIcon = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path
-      stroke="#686B6E"
+      stroke={props.stroke || "#686B6E"}
       strokeLinecap="round"
-      strokeWidth={1.5}
+      strokeWidth={props.strokeWidth || 1.5}
       d="m3 10.8 6.02 6.422a1 1 0 0 0 1.46 0L21 6"
     />
   </svg>

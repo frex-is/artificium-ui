@@ -4,6 +4,7 @@ import { ButtonType } from "../../../types/buttonType";
 const getTypeStyles = (type: ButtonType) => {
   if (type === "outlined") return OutlineButtonStyle;
   if (type === "ghost") return GhostButtonStyle;
+  if (type === "glass") return GlassButtonStyle;
   return "";
 };
 
@@ -43,7 +44,21 @@ export const GhostButtonStyle = css<{
   }
 `;
 
-export const GlassButtonStyle = css``;
+export const GlassButtonStyle = css`
+  box-shadow:
+    inset 16px 24px 64px #ffffff14,
+    inset 0px 8px 12px 0px #ffffff38,
+    inset 0 24px 24px -16px #00000045;
+  background: linear-gradient(to bottom right, #d7eded2e 0%, #ccebeb14 100%);
+
+  &:hover {
+    background: linear-gradient(to bottom right, #d7eded2e 0%, #ccebeb14 100%);
+  }
+
+  &:active {
+    background: linear-gradient(to bottom right, #d7eded2e 0%, #ccebeb14 100%);
+  }
+`;
 
 export const IconButtonContainer = styled.div<{
   iconSize: string;
