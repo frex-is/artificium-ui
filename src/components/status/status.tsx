@@ -5,9 +5,21 @@ import { StatusType } from "../../types/statusType";
 import { MoonIcon } from "../icons/moon";
 
 export interface StatusProps {
+  /**
+   * The status of the user. Possible values: 'online', 'offline', 'busy', 'away'.
+   */
   type: StatusType;
 }
 
+/**
+ * Represents a status component.
+ *
+ * @component
+ * @param props `StatusProps` - The properties of the Status component.
+ * @param props.type `StatusType` - The status of the user. Possible values: 'online', 'offline', 'busy', 'away'.
+ *
+ * @returns {JSX.Element} - Returns a JSX element representing the status.
+ */
 export const Status = ({ type }: StatusProps) => {
   const { theme } = useArtificium();
 
