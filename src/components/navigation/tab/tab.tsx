@@ -10,11 +10,11 @@ export interface TabProps {
   onClick?: () => void;
 }
 
-export const Tab = ({ label, icon, isActive = false, onClick }: TabProps) => {
+export const Tab = ({ label, icon, isActive, onClick }: TabProps) => {
   const { theme } = useArtificium();
 
   return (
-    <TabContainer>
+    <TabContainer onClick={() => onClick()}>
       {icon}
       <Paragraph
         size="m"
@@ -25,4 +25,9 @@ export const Tab = ({ label, icon, isActive = false, onClick }: TabProps) => {
       {isActive && <Indicator color={theme.color.quinary[500]} />}
     </TabContainer>
   );
+};
+
+Tab.defaultProps = {
+  isActive: false,
+  onClick: () => {},
 };

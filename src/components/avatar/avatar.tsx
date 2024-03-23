@@ -10,12 +10,7 @@ export interface AvatarProps {
   withStatus?: boolean;
 }
 
-export const Avatar = ({
-  avatar,
-  size = "48px",
-  status = "online",
-  withStatus = false,
-}: AvatarProps) => (
+export const Avatar = ({ avatar, size, status, withStatus }: AvatarProps) => (
   <AvatarContainer>
     <ProfileContainer
       size={size}
@@ -29,3 +24,9 @@ export const Avatar = ({
     )}
   </AvatarContainer>
 );
+
+Avatar.defaultProps = {
+  size: "48px",
+  status: "offline",
+  withStatus: false,
+};

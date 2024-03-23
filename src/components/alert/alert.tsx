@@ -13,7 +13,7 @@ import { Duration } from "../../types/duration";
 
 export interface AlertProps {
   alertType: AlertType;
-  duration: Duration;
+  duration?: Duration;
   onClose?: (isExitingByUser: boolean) => void;
   children: ReactNode;
   isClosable?: boolean;
@@ -79,8 +79,8 @@ export const Alert = ({
   duration,
   onClose,
   children,
-  isClosable = false,
-  title = undefined,
+  isClosable,
+  title,
 }: AlertProps) => {
   const { theme } = useArtificium();
   const { titleComponent, alertColor, message, icon, visible, closeAlert } = useAlert({
@@ -118,4 +118,11 @@ export const Alert = ({
       {alertComponent}
     </AlertContainer>
   );
+};
+
+Alert.defaultProps = {
+  duration: 1000,
+  isClosable: false,
+  title: undefined,
+  onClose: () => {},
 };

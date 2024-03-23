@@ -6,7 +6,7 @@ import { useArtificium } from "../../hooks/useArtificum";
 
 export interface UserProps {
   username: string;
-  subname: string;
+  subname?: string;
   avatar: string;
 }
 
@@ -36,4 +36,8 @@ export const User = ({ avatar, username, subname }: UserProps) => {
       </InformationContainer>
     </UserContainer>
   );
+};
+
+User.defaultProps = {
+  subname: "",
 };

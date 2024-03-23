@@ -16,7 +16,7 @@ export const NavigationItem = ({
   label,
   icon,
   shortcut,
-  isActive = false,
+  isActive,
   onClick,
 }: NavigationItemProps) => {
   const { theme } = useArtificium();
@@ -39,4 +39,10 @@ export const NavigationItem = ({
       {shortcut && <Tag name={shortcut} />}
     </NavigationItemContainer>
   );
+};
+
+NavigationItem.defaultProps = {
+  isActive: false,
+  shortcut: undefined,
+  onClick: () => {},
 };

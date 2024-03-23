@@ -35,3 +35,7 @@ export const IconButton = ({ icon, type, size, variant, forceState }: IconButton
     </IconButtonContainer>
   );
 };
+
+IconButton.defaultProps = {
+  forceState: undefined,
+};

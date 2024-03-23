@@ -31,12 +31,12 @@ interface TagProps {
  */
 export const Tag: FunctionComponent<TagProps> = ({
   name,
-  variant = "primary",
-  customColor = undefined,
-  noGlow = false,
-  iconPosition = "before",
-  icon = undefined,
-  onClick = undefined,
+  variant,
+  customColor,
+  noGlow,
+  iconPosition,
+  icon,
+  onClick,
 }) => {
   const { fontFamily, color } = useTags({ variant, customColor });
 
@@ -58,4 +58,13 @@ export const Tag: FunctionComponent<TagProps> = ({
       {iconPosition === "after" && icon}
     </TagContainer>
   );
+};
+
+Tag.defaultProps = {
+  variant: "primary",
+  customColor: undefined,
+  noGlow: false,
+  icon: undefined,
+  iconPosition: "before",
+  onClick: undefined,
 };

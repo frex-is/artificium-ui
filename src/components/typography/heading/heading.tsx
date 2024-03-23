@@ -23,12 +23,7 @@ export interface HeadingProps {
  *
  * @returns {JSX.Element} - Return a JSX element  representing the heading.
  */
-export const Heading: FunctionComponent<HeadingProps> = ({
-  children,
-  size = "m",
-  color = undefined,
-  fontWeight = "regular",
-}) => {
+export const Heading: FunctionComponent<HeadingProps> = ({ children, size, color, fontWeight }) => {
   const { fontFamily, fontSize, lineHeight, letterSpacing, textColor } = useHeading({
     size,
     fontWeight,
@@ -46,4 +41,10 @@ export const Heading: FunctionComponent<HeadingProps> = ({
       {children}
     </HeadingContainer>
   );
+};
+
+Heading.defaultProps = {
+  size: "m",
+  color: undefined,
+  fontWeight: "regular",
 };

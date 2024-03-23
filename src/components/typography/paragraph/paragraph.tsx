@@ -6,7 +6,7 @@ import { useParagraph } from "./useParagraph";
 
 export interface ParagraphProps {
   children: ReactNode;
-  size: Size;
+  size?: Size;
   fontWeight?: FontWeight;
   color?: string;
   isSpan?: boolean;
@@ -15,9 +15,9 @@ export interface ParagraphProps {
 export const Paragraph: FunctionComponent<ParagraphProps> = ({
   size,
   children,
-  fontWeight = "regular",
-  color = undefined,
-  isSpan = false,
+  fontWeight,
+  color,
+  isSpan,
 }) => {
   const { fontFamily, fontSize, lineHeight, letterSpacing, textColor } = useParagraph({
     size,
@@ -37,4 +37,11 @@ export const Paragraph: FunctionComponent<ParagraphProps> = ({
       {children}
     </ParagraphContainer>
   );
+};
+
+Paragraph.defaultProps = {
+  fontWeight: "regular",
+  color: undefined,
+  isSpan: false,
+  size: "m",
 };
