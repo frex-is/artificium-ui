@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import { useArtificium } from "../../../hooks/useArtificum";
 import { Indicator, TabContainer } from "./tab.style";
 import { Paragraph } from "../../typography";
@@ -34,7 +34,7 @@ export interface TabProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the tab.
  */
-export const Tab = ({ label, icon, isActive, onClick }: TabProps) => {
+export const Tab: FunctionComponent<TabProps> = ({ label, icon, isActive, onClick }) => {
   const { theme } = useArtificium();
 
   return (

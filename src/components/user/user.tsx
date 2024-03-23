@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { InformationContainer, UserContainer } from "./user.style";
 import { Avatar } from "../avatar/avatar";
 import { Paragraph } from "../typography";
@@ -30,7 +30,7 @@ export interface UserProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the user.
  */
-export const User = ({ avatar, username, subname }: UserProps) => {
+export const User: FunctionComponent<UserProps> = ({ avatar, username, subname }) => {
   const { theme } = useArtificium();
 
   return (

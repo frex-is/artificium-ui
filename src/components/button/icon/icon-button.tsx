@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { FunctionComponent, ReactElement, ReactNode } from "react";
 import { ButtonType } from "../../../types/buttonType";
 import { IconButtonContainer } from "./icon-button.style";
 import { Size } from "../../../types/size";
@@ -13,7 +13,13 @@ export interface IconButtonProps {
   forceState?: "active" | "hover";
 }
 
-export const IconButton = ({ icon, type, size, variant, forceState }: IconButtonProps) => {
+export const IconButton: FunctionComponent<IconButtonProps> = ({
+  icon,
+  type,
+  size,
+  variant,
+  forceState,
+}) => {
   const { activeColor, hoverColor, buttonColor, renderedIcon, iconSize } = useIconButton({
     icon,
     size,

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import { useArtificium } from "../../../hooks/useArtificum";
 import { NavigationInformationContainer, NavigationItemContainer } from "./navigation-item.style";
 import { Paragraph } from "../../typography";
@@ -40,13 +40,13 @@ export interface NavigationItemProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the navigation item.
  */
-export const NavigationItem = ({
+export const NavigationItem: FunctionComponent<NavigationItemProps> = ({
   label,
   icon,
   shortcut,
   isActive,
   onClick,
-}: NavigationItemProps) => {
+}) => {
   const { theme } = useArtificium();
 
   return (

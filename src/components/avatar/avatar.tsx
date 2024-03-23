@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { AvatarContainer, ProfileContainer, StatusContainer } from "./avatar.style";
 import { Status } from "../status/status";
 import { StatusType } from "../../types/statusType";
@@ -34,7 +34,7 @@ export interface AvatarProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the avatar.
  */
-export const Avatar = ({ avatar, size, status, withStatus }: AvatarProps) => (
+export const Avatar: FunctionComponent<AvatarProps> = ({ avatar, size, status, withStatus }) => (
   <AvatarContainer>
     <ProfileContainer
       size={size}

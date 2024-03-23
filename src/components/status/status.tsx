@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { useArtificium } from "../../hooks/useArtificum";
 import { MoonContainer, Circle, StatusContainer, SmallCircle } from "./status.style";
 import { StatusType } from "../../types/statusType";
@@ -20,7 +20,7 @@ export interface StatusProps {
  *
  * @returns {JSX.Element} - Returns a JSX element representing the status.
  */
-export const Status = ({ type }: StatusProps) => {
+export const Status: FunctionComponent<StatusProps> = ({ type }) => {
   const { theme } = useArtificium();
 
   const status = {

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, FunctionComponent } from "react";
 import { useAlert } from "./useAlert";
 import {
   AlertContainer,
@@ -37,7 +37,13 @@ interface TitleAlertProps {
   title: ReactNode;
 }
 
-const NoTitleAlert = ({ alertColor, message, icon, closeAlert, isClosable }: NoTitleAlertProps) => (
+const NoTitleAlert: FunctionComponent<NoTitleAlertProps> = ({
+  alertColor,
+  message,
+  icon,
+  closeAlert,
+  isClosable,
+}) => (
   <>
     <AlertIconContainer color={alertColor}>{icon}</AlertIconContainer> {message}
     {isClosable && (
@@ -49,14 +55,14 @@ const NoTitleAlert = ({ alertColor, message, icon, closeAlert, isClosable }: NoT
   </>
 );
 
-const TitleAlert = ({
+const TitleAlert: FunctionComponent<TitleAlertProps> = ({
   alertColor,
   message,
   icon,
   closeAlert,
   isClosable,
   title,
-}: TitleAlertProps) => (
+}) => (
   <>
     <AlertIconContainer color={alertColor}>{icon}</AlertIconContainer>
     <AlertTitleContentContainer>
@@ -74,14 +80,14 @@ const TitleAlert = ({
   </>
 );
 
-export const Alert = ({
+export const Alert: FunctionComponent<AlertProps> = ({
   alertType,
   duration,
   onClose,
   children,
   isClosable,
   title,
-}: AlertProps) => {
+}) => {
   const { theme } = useArtificium();
   const { titleComponent, alertColor, message, icon, visible, closeAlert } = useAlert({
     alertType,
