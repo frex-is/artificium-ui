@@ -4,8 +4,12 @@ import { useArtificium } from "../../../hooks/useArtificum";
 import { CheckIcon } from "../../icons";
 import { useCheckBox } from "./useCheckBox";
 
-export const CheckBox = () => {
-  const { selected, setSelected } = useCheckBox();
+export interface CheckBoxProps {
+  isSelected?: boolean;
+}
+
+export const CheckBox = ({ isSelected }: CheckBoxProps) => {
+  const { selected, setSelected } = useCheckBox({ isSelected });
   const { theme } = useArtificium();
 
   return (
@@ -28,4 +32,8 @@ export const CheckBox = () => {
       </StyledCheckBox>
     </CheckBoxContainer>
   );
+};
+
+CheckBox.defaultProps = {
+  isSelected: false,
 };

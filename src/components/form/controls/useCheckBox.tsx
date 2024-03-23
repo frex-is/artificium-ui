@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
-export const useCheckBox = () => {
-  const [selected, setSelected] = useState(false);
+export interface useCheckBoxProps {
+  isSelected: boolean;
+}
+
+export const useCheckBox = ({ isSelected }: useCheckBoxProps) => {
+  const [selected, setSelected] = useState(isSelected);
 
   return { selected, setSelected };
 };
