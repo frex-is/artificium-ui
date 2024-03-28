@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { CheckBoxContainer, HiddenCheckbox, StyledCheckBox } from "./check-box.style";
-import { useArtificium } from "../../../hooks/useArtificum";
-import { CheckIcon } from "../../icons";
+import { useArtificium } from "../../../../hooks/useArtificum";
+import { CheckIcon } from "../../../icons";
 import { useCheckBox } from "./useCheckBox";
 
 export interface CheckBoxProps {
@@ -9,6 +9,10 @@ export interface CheckBoxProps {
    * The initial state of the checkbox. Optional, defaults to false.
    */
   isSelected?: boolean;
+  /**
+   * The function to be called when the checkbox is clicked.
+   */
+  onClick?: () => void;
 }
 
 /**
@@ -20,12 +24,12 @@ export interface CheckBoxProps {
  *
  * @returns {JSX.Element} A CheckBox component.
  */
-export const CheckBox: FunctionComponent<CheckBoxProps> = ({ isSelected }) => {
-  const { selected, setSelected } = useCheckBox({ isSelected });
+export const CheckBox: FunctionComponent<CheckBoxProps> = ({ isSelected, onClick }) => {
+  const { selected, onSelectCheckBox } = useCheckBox({ isSelected, onClick });
   const { theme } = useArtificium();
 
   return (
-    <CheckBoxContainer onClick={() => setSelected(!selected)}>
+    <CheckBoxContainer onClick={() => onSelectCheckBox()}>
       <HiddenCheckbox />
       <StyledCheckBox
         borderColor={theme.color.primary[500]}

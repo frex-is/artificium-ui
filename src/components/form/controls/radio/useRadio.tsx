@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export interface useCheckBoxProps {
+export interface useRadioProps {
   isSelected: boolean;
 }
 
-export const useCheckBox = ({ isSelected }: useCheckBoxProps) => {
+export const useRadio = ({ isSelected }: useRadioProps) => {
   const [selected, setSelected] = useState(isSelected);
 
   return { selected, setSelected };
